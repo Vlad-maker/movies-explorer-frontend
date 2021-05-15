@@ -1,0 +1,69 @@
+@import url('../../../vendor/fonts/Inter/inter.css');
+
+.promo {
+    width: 100%;
+    margin: 0;
+    display: flex;
+}
+
+.promo__container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1280px;
+    min-height: 493px;
+    width: 100%;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+.promo__heading {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 58px;
+    margin: 160px auto 0;
+    max-width: 730px;
+    align-self: center;
+    text-align: center;
+}
+
+.promo__links {
+    max-width: 308px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 150px auto 30px;
+       
+}
+
+.promo__link {
+    width: 96px;
+    height: 36px;
+    background-color: #E8E8E8;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    line-height: 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 10px;
+    margin-right: 10px;
+    
+}
+
+.promo__link:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s linear;
+}
+
+.promo__link:first-of-type {
+    margin-left: 10px;
+}
