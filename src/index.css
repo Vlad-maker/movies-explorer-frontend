@@ -1,10 +1,10 @@
 @import url('./vendor/normalize.css');
 
-div, h1, h2, h3, h4, p ,li, ul, img, section, article, main, header, body { 
+/* div, h1, h2, h3, h4, p ,li, ul, img, section, article, main, header, body { 
   outline-width: 1px; 
   outline-style: solid; 
   outline-color: red; 
-};
+}; */
 
 body {
     height: 100%;

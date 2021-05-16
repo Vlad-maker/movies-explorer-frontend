@@ -1,0 +1,100 @@
+@import url("../../../vendor/fonts/Inter/inter.css");
+
+.aboutProject {
+  width: 100%;
+}
+.aboutProject__container {
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.aboutProject__heading {
+  margin: 0 auto;
+  width: 1140px;
+  margin-top: 110px;
+}
+.text {
+  color: rgb(0, 0, 0);
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  letter-spacing: -0.04em;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  padding-bottom: 23px;
+  max-width: 1140px;
+}
+.aboutProject__block {
+  display: flex;
+  flex-direction: row;
+  width: 1140px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.aboutProject__description_left {
+  max-width: 550px;
+  margin: 70px 40px 0 0;
+}
+.aboutProject__description_right {
+  max-width: 550px;
+  margin: 70px 0 0 0;
+}
+
+.aboutProject__text {
+  margin: 0 0 26px 0;
+  font-family: Inter;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.04em;
+  color: rgb(0, 0, 0);
+}
+.aboutProject__paragraph {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(0, 0, 0);
+}
+.aboutProject__progress {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  max-width: 1140px;
+  margin-top: 110px;
+}
+.aboutProject__progress_backend {
+  width: 228px;
+  background-color: #3ddc84;
+  padding: 9px 0 9px 0;
+}
+.aboutProject__progress_frontend {
+  width: 912px;
+  color: rgb(8, 8, 8);
+  background-color: #F2F2F2;
+  padding: 9px 0 9px 0;
+}
+.aboutProject__progress-text {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  margin: 0;
+}
+.aboutProject__signature {
+  text-align: center;
+  margin: 14px 0 110px 0;
+  color: #8b8b8b;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
