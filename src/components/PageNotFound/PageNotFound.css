@@ -1,5 +1,5 @@
 .PageNotFound {
-    background-color: #202020;
+    background-color: #fff;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -18,7 +18,7 @@
     font-weight: 400;
     font-style: normal;
     line-height: 170px;
-    color: #fff;
+    color: #000;
 }
 .PageNotFound__text {
     margin: 0;
@@ -27,11 +27,11 @@
     font-weight: 400;
     font-style: normal;
     line-height: 19px;
-    color: #fff;
+    color: #000;
 }
 .PageNotFound__link {
     margin: 184px 0 0 0;
-    color: #4285f4;
+    color: #FF6838;
     font-family: Inter;
     font-size: 14px;
     font-weight: 400;
