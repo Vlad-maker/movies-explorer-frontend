@@ -1,6 +1,5 @@
-import React from "react";
 import "./AboutMe.css";
-import photo from "../../../img/photo.png";
+import photo from "../../../images/photo.png";
 
 const AboutMe = () => {
   return (
@@ -40,7 +39,7 @@ const AboutMe = () => {
               </li>
             </ul>
           </div>
-          <img className="aboutMe__img" src={photo} alt="Фото"></img>
+          <img className="aboutMe__image" src={photo} alt="Фото"></img>
         </div>
       </div>
     </section>

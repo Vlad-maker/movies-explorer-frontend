@@ -1,0 +1,89 @@
+@import url('../../../vendor/fonts/Inter/inter.css');
+
+.SearchForm {
+    margin: 0;
+    background-color: #ffffff;
+}
+.SearchForm__container {
+    max-width: 1140px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.SearchForm__search {
+    outline: none;
+    max-width: 100%;
+    max-height: 48px;
+    border-bottom: 1.5px solid rgba(170,170,170,0.2);
+    box-sizing: border-box;
+    margin: 80px 0 32px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.SearchForm__film {
+    outline: none;
+    border: none;
+    background-color: #ffffff;
+    margin: 12px 0 12px 22px;
+    color: #8b8b8b;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 28px;
+    line-height: 34;
+}
+.SearchForm__circle {
+    background-color: #FF6838;
+    border-radius: 48px;
+    width: 80px;
+    height: 34px;
+    margin: 7px 7px 7px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: opacity .5s linear;
+}
+.SearchForm__circle:hover {
+    opacity: 0.8;
+}
+.SearchFrom__block {
+    margin: 0 0 0 22px;
+    display: flex;
+    flex-direction: row;
+}
+.SearchFrom__text {
+    margin: 0;
+    font-family: Inter;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 18px;
+    color: #000;
+}
+
+@media screen and (max-width: 1024px){
+
+    .SearchForm__search{
+        margin: 0 auto;
+        margin-top: 60px;
+        max-width: 700px;
+    }
+    .SearchFrom__block {
+        margin: 0 0 0 22px;
+        margin-top: 38px;
+        margin-bottom: 57px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .SearchForm__film {
+        max-width: 100px;
+        font-size: 18px;
+    }
+}

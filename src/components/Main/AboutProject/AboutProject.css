@@ -1,6 +1,7 @@
 @import url("../../../vendor/fonts/Inter/inter.css");
 
 .aboutProject {
+  background-color: #ffffff;
   width: 100%;
 }
 .aboutProject__container {
@@ -15,14 +16,14 @@
   margin-top: 110px;
 }
 .text {
-  color: rgb(0, 0, 0);
+  color: #000;
   font-family: Inter;
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
   line-height: 27px;
   letter-spacing: -0.04em;
-  border-bottom: 1px solid rgb(0, 0, 0);
+  border-bottom: 1px solid #000;
   padding-bottom: 23px;
   max-width: 1140px;
 }
@@ -34,11 +35,11 @@
   margin: 0 auto;
 }
 
-.aboutProject__description_left {
+.aboutProject__description_first_text {
   max-width: 550px;
   margin: 70px 40px 0 0;
 }
-.aboutProject__description_right {
+.aboutProject__description_second_text {
   max-width: 550px;
   margin: 70px 0 0 0;
 }
@@ -51,7 +52,7 @@
   font-size: 20px;
   line-height: 24px;
   letter-spacing: -0.04em;
-  color: rgb(0, 0, 0);
+  color: #000;
 }
 .aboutProject__paragraph {
   font-family: Inter;
@@ -59,27 +60,27 @@
   font-style: normal;
   font-size: 14px;
   line-height: 20px;
-  color: rgb(0, 0, 0);
+  color: #000;
 }
-.aboutProject__progress {
+.aboutProject__graph {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   max-width: 1140px;
   margin-top: 110px;
 }
-.aboutProject__progress_backend {
+.aboutProject__graph_first_block {
   width: 228px;
   background-color: #3ddc84;
   padding: 9px 0 9px 0;
 }
-.aboutProject__progress_frontend {
+.aboutProject__graph_second_block {
   width: 912px;
-  color: rgb(8, 8, 8);
+  color: #000;
   background-color: #F2F2F2;
   padding: 9px 0 9px 0;
 }
-.aboutProject__progress-text {
+.aboutProject__graph-text {
   font-family: Inter;
   font-style: normal;
   font-weight: 400;
@@ -97,4 +98,110 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
+}
+@media screen and (max-width: 1279px) {
+  .text {
+    max-width: 1000px;
+  }
+  .aboutProject__graph_first_block {
+    max-width: 200px;
+  }
+  .aboutProject__graph_second_block {
+    max-width: 800px;
+  }
+  .aboutProject__block {
+    max-width: 1000px;
+  }
+  .aboutProject__text {
+    max-width: 400px;
+  }
+  .aboutProject__paragraph {
+    max-width: 400px;
+  }
+  .aboutProject__description_first_text {
+    margin-right: 140px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .text {
+    max-width: 668px;
+  }
+  .aboutProject__block {
+    max-width: 668px;
+  }
+  .aboutProject__graph_first_block {
+    max-width: 140px;
+  }
+  .aboutProject__graph_second_block {
+    max-width: 528px;
+  }
+  .aboutProject__description_first_text {
+    margin-right: 30px;
+  }
+  .aboutProject__graph{
+    margin-top: 93px;
+  }
+  .aboutProject__paragraph{
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+@media  screen and (max-width: 767px) {
+  .text {
+    max-width: 560px;
+  }
+  .aboutProject__block {
+    max-width: 560px;
+  }
+  .aboutProject__graph_first_block {
+    max-width: 105px;
+  }
+  .aboutProject__graph_second_block {
+    max-width: 465px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .text {
+    max-width: 520px;
+  }
+  .aboutProject__block {
+    max-width: 520px;
+  }
+  .aboutProject__graph_first_block {
+    width: 100px;
+  }
+  .aboutProject__graph_second_block {
+    width: 420px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .text {
+    max-width: 284px;
+  }
+  .aboutProject__block {
+    flex-direction: column;
+    max-width: 284px;
+  }
+  .aboutProject__text {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 16px;
+  }
+  .aboutProject__paragraph {
+    font-size: 11px;
+    line-height: 16px;
+    margin-bottom: 0;
+  }
+  .aboutProject__description_second_text{
+    margin-top: 56px;
+  }
+  .aboutProject__graph_first_block {
+    width: 100px;
+  }
+  .aboutProject__graph_second_block {
+    width: 184px;
+  }
+  .aboutProject__graph {
+    margin-top: 60px;
+  }
 }

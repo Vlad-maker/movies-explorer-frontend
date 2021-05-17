@@ -6,15 +6,15 @@ import AboutMe from "./AboutMe/AboutMe";
 import Portfolio from "./Portfolio/Portfolio";
 
 const Main = (props) => {
-    // props.handleLoggenIn();
-    return (
-      <main className='main'>
-        <Promo />
-        <AboutProject />
-        <Techs />
-        <AboutMe />
-        <Portfolio />
-      </main>
-    );
-  };
-  export default Main;
+  props.handleLoggenIn();
+  return (
+    <main className='main'>
+      <Promo />
+      <AboutProject />
+      <Techs />
+      <AboutMe />
+      <Portfolio />
+    </main>
+  );
+};
+export default Main;

@@ -1,0 +1,115 @@
+@import url("../../vendor/fonts/Inter/inter.css");
+
+.Register {
+  width: 100%;
+  height: calc(100% - 221px);
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: left;
+}
+.Register__container {
+  margin: 0 auto;
+  display: flex;
+  width: 396px;
+  flex-direction: column;
+}
+.Register__label {
+  margin: 0 0 24px 0;
+  display: flex;
+  flex-direction: column;
+}
+.Register__text {
+  margin: 0 0 5px 0;
+  font-family: Inter;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10px;
+  line-height: 12px;
+  color: #8b8b8b;
+}
+.Register__input {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: #000;
+  font-family: Inter;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17px;
+  border-bottom: 1px solid #FF6838;
+}
+.Register__button {
+  background-color: #FF6838;
+  width: 396px;
+  min-height: 45px;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-family: Inter;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17px;
+  border-radius: 3px;
+  margin: 134px 0 16px 0;
+  cursor: pointer;
+  transition: opacity .5s linear;
+}
+.Register__reg {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #8b8b8b;
+  text-align: center;
+  margin: 0;
+}
+.Register__link {
+  color: #FF6838;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity .5s linear;
+}
+.Register__validation {
+  margin: 6px 0 0 0;
+  font-family: Inter;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10px;
+  line-height: 12px;
+  color: #ee3465;
+}
+.Register__link:hover, .Register__button:hover {
+    opacity: 0.8;
+}
+.Register__validation-disable {
+  display: none;
+}
+.Register__err {
+  color: #ee3465;
+}
+@media screen and (max-width: 500px) {
+  .Register__label {
+    max-width: 260px;
+  }
+  .Register__container {
+    align-items: center;
+    max-width: 320px;
+  }
+  .Register__button {
+    margin-top: 198px;
+    width: 260px;
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 14px;
+  }
+  .Register__reg {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

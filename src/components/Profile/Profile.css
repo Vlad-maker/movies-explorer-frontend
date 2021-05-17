@@ -1,0 +1,121 @@
+@import url('../../vendor/fonts/Inter/inter.css');
+
+.profile {
+    background-color: #ffffff;
+    width: 100%;
+    margin: 0;
+    height: calc(100% - 78px)
+}
+.profile__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 74px 0 0 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.profile__heading {
+    margin: 0;
+    padding: 0;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    color: #000;
+}
+.profile__label {
+    margin: 123px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    width: 410px;
+    justify-content: space-between;
+    border-bottom: 1px solid #424242;
+    padding-bottom: 16px;;
+}
+.profile__text {
+    font-family: Inter;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 11px;
+    line-height: 14px;
+    color: rgb(0, 0, 0);
+    margin: 0;
+}
+.profile__name {
+    text-align: right;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 11px;
+    line-height: 14px;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.profile__block {
+    display: flex;
+    flex-direction: row;
+    width: 410px;
+    justify-content: space-between;
+    margin: 17px 0 0 0;
+}
+.profile__reg {
+    margin: 220px 0 16px 0;
+    background-color: #ffffff;
+    border: none;
+    color: #000;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: opacity .5s linear;
+}
+.profile__logOut {
+    font-family: Inter;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: #ee3465;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: opacity .5s linear;
+}
+.profile__reg:hover, .profile__logOut:hover {
+    opacity: 0.8;
+}
+@media screen and (max-width: 960px) {
+    .profile__label{
+        margin-top: 96px;
+    }
+    .profile__container{
+        padding-top: 236px;
+    }
+    .profile__reg {
+        margin-top: 210px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .profile__label {
+        max-width: 260px;
+    }
+    .profile__block{
+        max-width: 260px;
+    }
+    .profile__reg {
+        margin-top: 379px;
+    }
+    .profile__container {
+        padding-top: 70px;
+    }
+}

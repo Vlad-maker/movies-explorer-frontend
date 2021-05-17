@@ -1,6 +1,5 @@
-import React from "react";
 import "./Portfolio.css";
-import image from "../../../img/strelka.svg";
+import image from "../../../images/strelka.svg";
 
 const Portfolio = () => {
   return (
