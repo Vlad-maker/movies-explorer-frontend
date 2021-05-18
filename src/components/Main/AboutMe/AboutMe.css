@@ -10,7 +10,7 @@
   flex-direction: column;
   max-width: 1280px;
 }
-.aboutMe__heading {
+.aboutMe__header {
   margin: 0 auto;
   width: 1140px;
   margin-top: 110px;
@@ -36,7 +36,7 @@
   color: #000;
   margin: 0 0 18px 0;
 }
-.aboutMe__description {
+.aboutMe__caption {
   font-family: Inter;
   font-weight: 500;
   font-style: normal;
@@ -45,7 +45,7 @@
   color: #000;
   mix-blend-mode: normal;
 }
-.aboutMe__text {
+.aboutMe__description {
   font-family: Inter;
   font-weight: 400;
   font-style: normal;
@@ -54,7 +54,7 @@
   color: #000;
   mix-blend-mode: normal;
 }
-.aboutMe__list {
+.aboutMe__social {
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -78,7 +78,7 @@
 .aboutMe__link:hover {
   opacity: 0.8;
 }
-.aboutMe__image {
+.aboutMe__photo {
     width: 270px;
     height: 327px;
     border-radius: 10px;
@@ -86,12 +86,12 @@
     object-fit: cover;
 }
 @media screen and (max-width: 1279px) {
-  .aboutMe__image{
+  .aboutMe__photo{
     margin-left: 120px;
   }
 }
 @media screen and (max-width: 1050px) {
-  .aboutMe__image{
+  .aboutMe__photo{
     margin-left: 49px;
     width: 255px;
     height: 307px;
@@ -101,18 +101,18 @@
     line-height: 40px;
     margin-bottom: 16px;
   }
-  .aboutMe__description{
+  .aboutMe__caption{
     font-size: 12px;
     line-height: 18px;
     margin-bottom: 20px;
   }
-  .aboutMe__text{
+  .aboutMe__description{
     font-size: 12px;
     line-height: 18px;
     max-width: 364px;
     margin: 0;
   }
-  .aboutMe__list {
+  .aboutMe__social {
     margin-top: 87px;
   }
 }
@@ -120,13 +120,13 @@
   .aboutMe__main {
     flex-direction: column-reverse;
   }
-  .aboutMe__image {
+  .aboutMe__photo {
     width: 292px;
     height: 352px;
     margin: 0 auto;
     margin-top: 60px;
   }
-  .aboutMe__text {
+  .aboutMe__description {
     max-width: 292px;
   }
 }
@@ -134,7 +134,7 @@
   .aboutMe__main {
     flex-direction: column-reverse;
   }
-  .aboutMe__image {
+  .aboutMe__photo {
     width: 292px;
     height: 352px;
     margin: 0 auto;
@@ -143,18 +143,18 @@
   .aboutMe__block {
     margin-top: 40px;
   }
-  .aboutMe__text {
+  .aboutMe__description {
     max-width: 292px;
   }
-  .aboutMe__list{
+  .aboutMe__social{
     margin-top: 40px;
   }
 }
 @media screen and (max-width: 550px) {
-  .aboutMe__heading {
+  .aboutMe__header {
     margin-top: 70px;
   }
-  .aboutMe__list{
+  .aboutMe__social{
     margin-bottom: 70px;
   }
 }

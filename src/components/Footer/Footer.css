@@ -10,7 +10,7 @@
     flex-direction: column;
     margin: 0 auto;
 }
-.footer__heading {
+.footer__header {
     max-width: 1140px;
     margin: 80px 0 0 0;
     text-align: center;
@@ -39,7 +39,7 @@
     color: #000;
     margin: 0 0 20px 0;
 }
-.footer__list {
+.footer__social {
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -99,7 +99,7 @@
     .Footer__container {
         max-width: 300px;
     }
-    .Footer__heading{
+    .Footer__header{
         margin-top: 45px;
         font-size: 12px;
         line-height: 15px;
@@ -108,7 +108,7 @@
         flex-direction: column-reverse;
         text-align: center;
     }
-    .Footer__list {
+    .Footer__social {
         flex-direction: column;
         text-align: center;
     }

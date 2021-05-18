@@ -10,7 +10,7 @@
   flex-direction: column;
   margin: 0 auto;
 }
-.aboutProject__heading {
+.aboutProject__header {
   margin: 0 auto;
   width: 1140px;
   margin-top: 110px;
@@ -35,11 +35,11 @@
   margin: 0 auto;
 }
 
-.aboutProject__description_first_text {
+.aboutProject__description_left {
   max-width: 550px;
   margin: 70px 40px 0 0;
 }
-.aboutProject__description_second_text {
+.aboutProject__description_right {
   max-width: 550px;
   margin: 70px 0 0 0;
 }
@@ -54,7 +54,7 @@
   letter-spacing: -0.04em;
   color: #000;
 }
-.aboutProject__paragraph {
+.aboutProject__caption {
   font-family: Inter;
   font-weight: 400;
   font-style: normal;
@@ -62,25 +62,25 @@
   line-height: 20px;
   color: #000;
 }
-.aboutProject__graph {
+.aboutProject__progress {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   max-width: 1140px;
   margin-top: 110px;
 }
-.aboutProject__graph_first_block {
+.aboutProject__progress_block-backend {
   width: 228px;
   background-color: #3ddc84;
   padding: 9px 0 9px 0;
 }
-.aboutProject__graph_second_block {
+.aboutProject__progress_block-frontend {
   width: 912px;
   color: #000;
   background-color: #F2F2F2;
   padding: 9px 0 9px 0;
 }
-.aboutProject__graph-text {
+.aboutProject__progress-text {
   font-family: Inter;
   font-style: normal;
   font-weight: 400;
@@ -103,10 +103,10 @@
   .text {
     max-width: 1000px;
   }
-  .aboutProject__graph_first_block {
+  .aboutProject__progress_block-backend {
     max-width: 200px;
   }
-  .aboutProject__graph_second_block {
+  .aboutProject__progress_block-frontend {
     max-width: 800px;
   }
   .aboutProject__block {
@@ -115,10 +115,10 @@
   .aboutProject__text {
     max-width: 400px;
   }
-  .aboutProject__paragraph {
+  .aboutProject__caption {
     max-width: 400px;
   }
-  .aboutProject__description_first_text {
+  .aboutProject__description_left {
     margin-right: 140px;
   }
 }
@@ -129,19 +129,19 @@
   .aboutProject__block {
     max-width: 668px;
   }
-  .aboutProject__graph_first_block {
+  .aboutProject__progress_block-backend {
     max-width: 140px;
   }
-  .aboutProject__graph_second_block {
+  .aboutProject__progress_block-frontend {
     max-width: 528px;
   }
-  .aboutProject__description_first_text {
+  .aboutProject__description_left {
     margin-right: 30px;
   }
-  .aboutProject__graph{
+  .aboutProject__progress{
     margin-top: 93px;
   }
-  .aboutProject__paragraph{
+  .aboutProject__caption{
     font-size: 12px;
     line-height: 18px;
   }
@@ -153,10 +153,10 @@
   .aboutProject__block {
     max-width: 560px;
   }
-  .aboutProject__graph_first_block {
+  .aboutProject__progress_block-backend {
     max-width: 105px;
   }
-  .aboutProject__graph_second_block {
+  .aboutProject__progress_block-frontend {
     max-width: 465px;
   }
 }
@@ -167,10 +167,10 @@
   .aboutProject__block {
     max-width: 520px;
   }
-  .aboutProject__graph_first_block {
+  .aboutProject__progress_block-backend {
     width: 100px;
   }
-  .aboutProject__graph_second_block {
+  .aboutProject__progress_block-frontend {
     width: 420px;
   }
 }
@@ -187,21 +187,21 @@
     line-height: 22px;
     margin-bottom: 16px;
   }
-  .aboutProject__paragraph {
+  .aboutProject__caption {
     font-size: 11px;
     line-height: 16px;
     margin-bottom: 0;
   }
-  .aboutProject__description_second_text{
+  .aboutProject__description_right{
     margin-top: 56px;
   }
-  .aboutProject__graph_first_block {
+  .aboutProject__progress_block-backend {
     width: 100px;
   }
-  .aboutProject__graph_second_block {
+  .aboutProject__progress_block-frontend {
     width: 184px;
   }
-  .aboutProject__graph {
+  .aboutProject__progress {
     margin-top: 60px;
   }
 }

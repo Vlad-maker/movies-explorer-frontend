@@ -3,7 +3,7 @@ import "./Header.css";
 import logo from "../../images/logo.svg";
 import icon from "../../images/account.svg";
 import { Link, useLocation } from "react-router-dom";
-import Hamburger from "../Navigation/Hamburger/Hamburger";
+import Burger from "../Burger/Burger";
 
 const Header = (props) => {
   const locationLink = useLocation();
@@ -15,7 +15,7 @@ const Header = (props) => {
           <Link to="/">
             <img className="header__logo-signup" src={logo} alt="Логотип"></img>
           </Link>
-          <h2 className="header__sign-text">Добро пожаловать!</h2>
+          <h2 className="header__sign-caption">Добро пожаловать!</h2>
         </div>
       );
     } else if (locationLink.pathname === "/signin") {
@@ -24,7 +24,7 @@ const Header = (props) => {
           <Link to="/">
             <img className="header__logo-signup" src={logo} alt="Логотип"></img>
           </Link>
-          <h2 className="header__sign-text">Рады видеть!</h2>
+          <h2 className="header__sign-caption">Рады видеть!</h2>
         </div>
       );
     } else if (
@@ -40,36 +40,36 @@ const Header = (props) => {
           </Link>
           {props.loggedIn ? (
             <>
-              <Hamburger />
+              <Burger />
               <div className="header__burger">
                 <Link className="header__movies header__animation" to="/movies">
                   Фильмы
                 </Link>
                 <Link
-                  className="header__savedMovies header__animation"
+                  className="header__movies_mycollection header__animation"
                   to="/saved-movies"
                 >
                   Сохраненные фильмы
                 </Link>
-                <div className="header__account_btn">
+                <div className="header__account_btn header__animation">
                 <Link
-                  className="header__profile header__animation"
+                  className="header__profile"
                   to="/profile"
                 >
                   Аккаунт
                 </Link>
-                <Link className="header__block header__animation" to="/profile">
+                <Link className="header__block" to="/profile">
                   <img className="header__image" src={icon} alt="Иконка"></img>
                 </Link>
                 </div>
               </div>
             </>
           ) : (
-            <div className="header__text-box">
-              <Link className="header__text header__text-reg" to="/signup">
+            <div className="header__menu">
+              <Link className="header__menu_btn header__registration" to="/signup">
                 Регистрация
               </Link>
-              <Link className="header__text header__log" to="/signin">
+              <Link className="header__menu_btn header__login" to="/signin">
                 <p className="header__description">Войти</p>
               </Link>
             </div>
@@ -85,8 +85,6 @@ const Header = (props) => {
         props.loggedIn ||
         locationLink.pathname === "/signup" ||
         locationLink.pathname === "/signin"
-          ? "header__dark"
-          : ""
       }`}
       id="header"
     >

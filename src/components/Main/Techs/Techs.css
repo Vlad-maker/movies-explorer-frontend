@@ -23,7 +23,7 @@
   flex-direction: column;
 }
 
-.techs__heading {
+.techs__header {
   max-width: 600px;
   text-align: center;
   font-family: Inter;
@@ -35,7 +35,7 @@
   margin: 90px 0 26px 0;
   color: #000;
 }
-.techs__description {
+.techs__caption {
   max-width: 460px;
   text-align: center;
   font-family: Inter;
@@ -83,7 +83,7 @@
     grid-template-columns: repeat(7, 84px);
     margin-bottom: 90px;
   }
-  .techs__description{
+  .techs__caption{
     font-size: 12px;
     line-height: 18px;
   }
@@ -106,13 +106,13 @@
     grid-template-columns: repeat(2, 84px);
     margin-bottom: 70px;
   }
-  .techs__heading {
+  .techs__header {
     font-size: 30px;
     line-height: 37px;
     margin-top: 60px;
     margin-bottom: 24px;
   }
-  .techs__description {
+  .techs__caption {
     font-size: 11px;
     line-height: 16px;
     margin-bottom: 50px;

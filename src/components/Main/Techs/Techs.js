@@ -6,8 +6,8 @@ const Techs = () => {
       <div className="techs__container">
         <p className="techs__text text">Технологии</p>
         <div className="techs__block">
-          <h2 className="techs__heading">7 технологий</h2>
-          <p className="techs__description">
+          <h2 className="techs__header">7 технологий</h2>
+          <p className="techs__caption">
             На курсе веб-разработки мы освоили технологии, которые применили в
             дипломном проекте.
           </p>

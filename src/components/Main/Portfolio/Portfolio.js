@@ -5,39 +5,39 @@ const Portfolio = () => {
   return (
     <section className="portfolio">
       <div className="portfolio__container">
-        <h2 className="portfolio__heading">Портфолио</h2>
+        <h2 className="portfolio__header">Портфолио</h2>
         <ul className="portfolio__block">
           <li className="portfolio__column">
-            <p className="portfolio__text">Статичный сайт</p>
+            <p className="portfolio__caption">Статичный сайт</p>
             <a
               className="portfolio__link"
               href="https://vlad-maker.github.io/how-to-learn/"
               target="_blank"
               rel="noreferrer"
             >
-              <img className="portfolio__image" src={image} alt="Стрелка"></img>
+              <img className="portfolio__icon" src={image} alt="Link Button"></img>
             </a>
           </li>
           <li className="portfolio__column">
-            <p className="portfolio__text">Адаптивный сайт</p>
+            <p className="portfolio__caption">Адаптивный сайт</p>
             <a
               className="portfolio__link"
               href="https://vlad-maker.github.io/russian-travel/"
               target="_blank"
               rel="noreferrer"
             >
-              <img className="portfolio__image" src={image} alt="Стрелка"></img>
+              <img className="portfolio__icon" src={image} alt="Link Button"></img>
             </a>
           </li>
           <li className="portfolio__column">
-            <p className="portfolio__text">Одностраничное приложение</p>
+            <p className="portfolio__caption">Одностраничное приложение</p>
             <a
               className="portfolio__link"
               href="https://mestop.nomoredomains.club/"
               target="_blank"
               rel="noreferrer"
             >
-              <img className="portfolio__image" src={image} alt="Стрелка"></img>
+              <img className="portfolio__icon" src={image} alt="Link Button"></img>
             </a>
           </li>
         </ul>

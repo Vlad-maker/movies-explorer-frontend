@@ -16,12 +16,12 @@ const Footer = (props) => {
       }`}
     >
       <div className="footer__container">
-        <h2 className="footer__heading">
+        <h2 className="footer__header">
           Учебный проект Яндекс.Практикум x BeatFilm.
         </h2>
         <div className="footer__block">
           <p className="footer__copyright">&copy; {new Date().getFullYear()}</p>
-          <ul className="footer__list">
+          <ul className="footer__social">
             <li className="footer__link">
               <a
                 className="footer__text"
