@@ -10,8 +10,8 @@ const Promo = () => {
             </h1>
             <div className="promo__links">
             <a className="promo__link" href="/movies">О проекте</a>
-            <a className="promo__link" href="#">Технологии</a>
-            <a className="promo__link" href="#">Студент</a>
+            <a className="promo__link" href="#techs">Технологии</a>
+            <a className="promo__link" href="#student">Студент</a>
             </div>
         </div>
       </section>
