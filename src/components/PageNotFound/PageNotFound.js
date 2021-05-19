@@ -8,11 +8,11 @@ const PageNotFound = (props) => {
       props.handleDisableFooter();
   });
   return (
-    <section className="PageNotFound">
-      <div className="PageNotFound__container">
-        <h2 className="PageNotFount__error">404</h2>
-        <p className="PageNotFound__text">Страница не найдена</p>
-        <Link className="PageNotFound__link" to="/" >Назад</Link>
+    <section className="pageNotFound">
+      <div className="pageNotFound__container">
+        <h2 className="pageNotFound__error">404</h2>
+        <p className="pageNotFound__text">Страница не найдена</p>
+        <Link className="pageNotFound__link" to="/" >Назад</Link>
       </div>
     </section>
   );

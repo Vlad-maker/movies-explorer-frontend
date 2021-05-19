@@ -17,7 +17,6 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    /* justify-content: space-between; */
 }
 .moviesCard__text {
     width: 280px;
@@ -39,8 +38,7 @@
     height: 30px;
     margin: 19px 14px 19px auto;
     cursor: pointer;
-    transition: opacity 0.2s linear;
-    
+    transition: opacity 0.2s linear; 
 }
 .moviesCard__like:hover {
     opacity: 0.8;
@@ -70,7 +68,6 @@
         width: 250px;
     }
 }
-
 @media screen and (max-width: 700px) {
     .moviesCard__text {
         width: 210px;

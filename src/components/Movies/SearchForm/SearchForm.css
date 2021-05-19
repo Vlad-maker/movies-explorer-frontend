@@ -1,16 +1,16 @@
 @import url('../../../vendor/fonts/Inter/inter.css');
 
-.SearchForm {
+.searchForm {
     margin: 0;
     background-color: #ffffff;
 }
-.SearchForm__container {
+.searchForm__container {
     max-width: 1140px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
 }
-.SearchForm__search {
+.searchForm__search {
     outline: none;
     max-width: 100%;
     max-height: 48px;
@@ -22,7 +22,7 @@
     justify-content: space-between;
     width: 100%;
 }
-.SearchForm__film {
+.searchForm__film {
     outline: none;
     border: none;
     background-color: #ffffff;
@@ -34,7 +34,7 @@
     font-size: 28px;
     line-height: 34;
 }
-.SearchForm__circle {
+.searchForm__button {
     background-color: #FF6838;
     border-radius: 48px;
     width: 80px;
@@ -49,14 +49,14 @@
     border: none;
     transition: opacity .5s linear;
 }
-.SearchForm__circle:hover {
+.searchForm__button:hover {
     opacity: 0.8;
 }
-.SearchFrom__block {
+.searchForm__block {
     display: flex;
     flex-direction: row;
 }
-.SearchFrom__text {
+.searchForm__text {
     margin: 0;
     font-family: Inter;
     font-weight: 400;
@@ -68,67 +68,67 @@
 
 @media screen and (max-width: 1180px){
 
-    .SearchForm__search{
+    .searchForm__search{
         margin: 0 auto;
         margin-top: 60px;
         max-width: 850px;
     }
-    .SearchFrom__block {
+    .searchForm__block {
         margin: 33px 0 48px 87px;
     }
-    .SearchFrom__text {
+    .searchForm__text {
        
     }
-    .SearchForm__film {
+    .searchForm__film {
         margin-right: 0;
     }
 }
 
 @media screen and (max-width: 1050px){
 
-    .SearchForm__search{
+    .searchForm__search{
         margin: 0 auto;
         margin-top: 60px;
         max-width: 752px;
     }
-    .SearchFrom__block {
+    .searchForm__block {
         margin: 33px 0 48px 137px;
     }
-    .SearchForm__film {
+    .searchForm__film {
         margin-right: 0;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .SearchForm__film {
+    .searchForm__film {
         max-width: 100px;
         font-size: 18px;
     }
-    .SearchForm__search{
+    .searchForm__search{
         max-width: 710px;
     }
-    .SearchFrom__block {
+    .searchForm__block {
         margin: 38px 30px 57px auto;
     }
-    .SearchForm__circle {
+    .searchForm__button {
         margin: 7px 0 7px;
     }
 }   
 
 @media screen and (max-width: 550px) {
-    .SearchFrom__block {
+    .searchForm__block {
         margin: 40px auto 50px;
     }
-    .SearchForm__search{
+    .searchForm__search{
         max-width: 350px;
     }
 } 
 
 @media screen and (max-width: 370px) {
-    .SearchForm__search{
+    .searchForm__search{
         max-width: 300px;
     }
-    .SearchFrom__block {
+    .searchForm__block {
         margin: 38px auto 0;
     }
 }

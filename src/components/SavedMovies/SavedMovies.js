@@ -6,11 +6,11 @@ import './SavedMovies.css'
 const SavedMovies = (props) => {
 
     useEffect(() => {
-        props.handleLoggenIn();
+        props.handleLoggedIn();
     });
 
     return(
-        <section className="SavedMovies">
+        <section className="savedMovies">
             <SearchForm />
             <SavedMoviesCard />
         </section>

@@ -3,8 +3,8 @@ import MoviesCard from '../MoviesCard/MoviesCard';
 
 const MoviesCardList = () => {
   return (
-    <section className="MoviesCardList">
-      <div className="MoviesCardList__container-movies MoviesCardList__container-low">
+    <section className="moviesCardList">
+      <div className="moviesCardList__container-movies moviesCardList__container-low">
         <MoviesCard title={"33 слова о дизайне"} />
         <MoviesCard title={"33 слова о дизайне"} />
         <MoviesCard title={"33 слова о дизайне"} />

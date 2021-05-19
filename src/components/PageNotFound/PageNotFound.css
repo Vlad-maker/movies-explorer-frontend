@@ -1,17 +1,17 @@
-.PageNotFound {
+.pageNotFound {
     background-color: #fff;
     height: 100%;
     width: 100%;
     margin: 0;
 }
-.PageNotFound__container {
+.pageNotFound__container {
     max-width: 1280px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     text-align: center;
 }
-.PageNotFount__error {
+.pageNotFound__error {
     margin: 246px 0 5px 0;
     font-family: Inter;
     font-size: 140px;
@@ -20,7 +20,7 @@
     line-height: 170px;
     color: #000;
 }
-.PageNotFound__text {
+.pageNotFound__text {
     margin: 0;
     font-family: Inter;
     font-size: 16px;
@@ -29,7 +29,7 @@
     line-height: 19px;
     color: #000;
 }
-.PageNotFound__link {
+.pageNotFound__link {
     margin: 184px 0 0 0;
     color: #FF6838;
     font-family: Inter;
@@ -38,30 +38,31 @@
     font-style: normal;
     line-height: 17px;
     text-decoration: none;
-    transition: opacity .5s linear;
+    transition: opacity 0.3s linear;
+    cursor: pointer;
 }
-.PageNotFound__link:hover {
+.pageNotFound__link:hover {
     opacity: 0.8;
 }
 @media screen and (max-width: 800px)
 {
-    .PageNotFount__error {
+    .pageNotFound__error {
         margin-top: 300px;
     }
 }
 @media screen and (max-width: 500px) {
-    .PageNotFount__error {
+    .pageNotFound__error {
         font-size: 80px;
         line-height: 97px;
         margin-top: 329px;
         margin-bottom: 10px;
     }
-    .PageNotFound__link {
+    .pageNotFound__link {
         margin-top: 284px;
         font-size: 12px;
         line-height: 15px;
     }
-    .PageNotFound__text {
+    .pageNotFound__text {
         font-size: 12px;
         line-height: 15px;
     }

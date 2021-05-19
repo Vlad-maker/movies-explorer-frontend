@@ -1,9 +1,10 @@
 import React from "react";
 import "./Header.css";
-import logo from "../../images/logo.svg";
-import icon from "../../images/account.svg";
 import { Link, useLocation } from "react-router-dom";
 import Burger from "../Burger/Burger";
+import logo from "../../images/logo.svg";
+import icon from "../../images/account.svg";
+
 
 const Header = (props) => {
   const locationLink = useLocation();

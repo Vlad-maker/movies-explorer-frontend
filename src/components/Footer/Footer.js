@@ -3,16 +3,12 @@ import "./Footer.css";
 
 const Footer = (props) => {
   const locationLink = useLocation();
-
   return (
     <section
       className={`footer ${
         locationLink.pathname === "/profile" ||
         locationLink.pathname === "/signup" ||
-        locationLink.pathname === "/signin" ||
-        props.disableFooter
-          ? "footer__disable"
-          : ""
+        locationLink.pathname === "/signin" 
       }`}
     >
       <div className="footer__container">

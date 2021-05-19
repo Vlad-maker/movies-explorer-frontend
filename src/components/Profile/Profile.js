@@ -3,12 +3,10 @@ import "./Profile.css";
 
 const Profile = (props) => {
   useEffect(() => {
-    props.handleLoggenIn();
-});
-
-  const [name, setName] = useState("Владислав");
+    props.handleLoggedIn();
+  });
+  const [name, setName] = useState("Виталий");
   const [email, setEmail] = useState("pochta@yandex.ru");
-
   const handleChangeName = (evt) => {
     setName(evt.target.value);
   };
@@ -20,7 +18,7 @@ const Profile = (props) => {
       <div className="profile__container">
         <h2 className="profile__heading"> Привет, {name}!</h2>
         <label className="profile__label">
-          <p className="profile__text">Имя</p>
+          <p className="profile__input">Имя</p>
           <input
             className="profile__name"
             id="name-input"
@@ -34,7 +32,7 @@ const Profile = (props) => {
           ></input>
         </label>
         <label className="profile__block">
-          <p className="profile__text">E-mail</p>
+          <p className="profile__input">E-mail</p>
           <input
             className="profile__name"
             type="email"
@@ -44,7 +42,7 @@ const Profile = (props) => {
             onChange={handleChangeEmail}
           ></input>
         </label>
-        <button className="profile__reg">Редактировать</button>
+        <button className="profile__edit">Редактировать</button>
         <button className="profile__logOut">Выйти из аккаунта</button>
       </div>
     </section>

@@ -73,7 +73,7 @@
   color: #000;
   cursor: pointer;
   text-decoration: none;
-  transition: opacity .5s linear;
+  transition: opacity 0.2s linear;
 }
 .aboutMe__link:hover {
   opacity: 0.8;

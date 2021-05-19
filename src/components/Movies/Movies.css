@@ -1,8 +1,8 @@
-.Movies{
+.movies{
     width: 100%;
     margin: 0;
 }
-.Movies__button {
+.movies__button {
     width: 320px;
     border: 1px solid #ffffff;
     border-radius: 10px;
@@ -20,17 +20,17 @@
     margin: 60px 0 80px 0;
     transition: opacity .5s linear;
 }
-.Movies__button:hover {
+.movies__button:hover {
     opacity: 0.8;
 }
-.Movies__block {
+.movies__block {
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 @media screen and (max-width: 630px) {
-    .Movies__button {
+    .movies__button {
         width: 240px;
     }
 }

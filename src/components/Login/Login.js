@@ -3,30 +3,30 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
-    <section className="Register">
-      <div className="Register__container">
-        <label className="Register__label">
-          <p className="Register__text" type="email">
+    <section className="register">
+      <div className="register__container">
+        <label className="register__label">
+          <p className="register__text" type="email">
             E-mail
           </p>
-          <input className="Register__input" size="44"></input>
-          <span className="Register__validation Register__validation-disable"></span>
+          <input className="register__input" size="44"></input>
+          <span className="register__validation register__validation-disable"></span>
         </label>
-        <label className="Register__label">
-          <p className="Register__text">Пароль</p>
+        <label className="register__label">
+          <p className="register__text">Пароль</p>
           <input
-            className="Register__input"
+            className="register__input"
             type="password"
             size="44"
           ></input>
-          <span className="Register__validation"></span>
+          <span className="register__validation"></span>
         </label>
-        <button className="Register__button" type="button">
+        <button className="register__button" type="button">
           Войти
         </button>
-        <p className="Register__reg Register__reg-login">
+        <p className="register__caption register__caption-login">
           Еще не зарегестрированы?
-          <Link className="Register__link" to="/signup">
+          <Link className="register__link" to="/signup">
           &nbsp;Регистрация
           </Link>
         </p>

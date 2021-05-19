@@ -5,14 +5,14 @@ import { useEffect } from "react";
 
 const Movies = (props) => {
   useEffect(() => {
-    props.handleLoggenIn();
+    props.handleLoggedIn();
   });
   return (
-    <section className="Movies">
+    <section className="movies">
       <SearchForm />
       <MoviesCardList />
-      <div className="Movies__block">
-        <button className="Movies__button">Ещё</button>
+      <div className="movies__block">
+        <button className="movies__button">Ещё</button>
       </div>
     </section>
   );

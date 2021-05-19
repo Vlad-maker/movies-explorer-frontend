@@ -5,7 +5,6 @@
     margin: 0;
     display: flex;
 }
-
 .promo__container {
     display: flex;
     flex-direction: column;
@@ -15,7 +14,6 @@
     background-color: #F5F5F5;
     border-radius: 10px;
 }
-
 .promo__heading {
     font-family: Inter;
     font-style: normal;
@@ -27,17 +25,14 @@
     align-self: center;
     text-align: center;
 }
-
 .promo__links {
     max-width: 308px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 150px auto 30px;
-       
+    margin: 150px auto 30px;   
 }
-
 .promo__link {
     width: 96px;
     height: 36px;
@@ -56,13 +51,11 @@
     margin-right: 10px;
     
 }
-
 .promo__link:hover {
     cursor: pointer;
     opacity: 0.8;
     transition: opacity 0.3s linear;
 }
-
 .promo__link:first-of-type {
     margin-left: 10px;
 }
@@ -73,7 +66,6 @@
         margin: 14px 14px 0 14px;
     }
 } 
-
 @media screen and (max-width: 425px) {
     
     .promo__heading {
@@ -81,7 +73,6 @@
         line-height: 37px;
     }
 } 
-
 @media screen and (max-width: 320px) {
     
     .promo__heading {

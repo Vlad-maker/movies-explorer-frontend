@@ -1,9 +1,10 @@
 @import url('./vendor/normalize.css');
 
+/* Development kit fot pixel perfect develompent */
 /* div, h1, h2, h3, h4, p ,li, ul, img, section, article, main, header, body { 
   outline-width: 1px; 
   outline-style: solid; 
-  outline-color: red; 
+  outline-color: blue; 
 }; */
 
 body {

@@ -1,22 +1,12 @@
-.MoviesCardList {
+.moviesCardList {
     margin: 0;
     width: 100%;
 }
-.MoviesCardList__container {
-    max-width: 1140px;
-    margin: 0 auto;
-    display: grid;
-    grid-auto-rows: auto;
-    grid-template-columns: repeat(3, 364px);
-    row-gap: 30px;
-    column-gap: 24px;
-    padding: 80px 0 240px 0;
-}
-.MoviesCardList__container-low {
+.moviesCardList__container-low {
     margin-bottom: 240px;
 }
 @media screen and (max-width: 800px) {
-    .MoviesCardList__container-low {
+    .moviesCardList__container-low {
         margin-bottom: 150px;
     }
 }

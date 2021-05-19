@@ -1,6 +1,6 @@
 @import url("../../vendor/fonts/Inter/inter.css");
 
-.Register {
+.register {
   width: 100%;
   height: calc(100% - 221px);
   background-color: #ffffff;
@@ -9,18 +9,18 @@
   display: flex;
   justify-content: left;
 }
-.Register__container {
+.register__container {
   margin: 0 auto;
   display: flex;
   width: 396px;
   flex-direction: column;
 }
-.Register__label {
+.register__label {
   margin: 0 0 24px 0;
   display: flex;
   flex-direction: column;
 }
-.Register__text {
+.register__text {
   margin: 0 0 5px 0;
   font-family: Inter;
   font-weight: 400;
@@ -29,7 +29,7 @@
   line-height: 12px;
   color: #8b8b8b;
 }
-.Register__input {
+.register__input {
   background-color: #fff;
   border: none;
   cursor: pointer;
@@ -42,7 +42,7 @@
   line-height: 17px;
   border-bottom: 1px solid #FF6838;
 }
-.Register__button {
+.register__button {
   background-color: #FF6838;
   width: 396px;
   min-height: 45px;
@@ -57,9 +57,9 @@
   border-radius: 3px;
   margin: 134px 0 16px 0;
   cursor: pointer;
-  transition: opacity .5s linear;
+  transition: opacity 0.2s linear;
 }
-.Register__reg {
+.register__caption {
   font-family: Inter;
   font-weight: 400;
   font-style: normal;
@@ -69,13 +69,13 @@
   text-align: center;
   margin: 0;
 }
-.Register__link {
+.register__link {
   color: #FF6838;
   cursor: pointer;
   text-decoration: none;
-  transition: opacity .5s linear;
+  transition: opacity 0.2s linear;
 }
-.Register__validation {
+.register__validation {
   margin: 6px 0 0 0;
   font-family: Inter;
   font-weight: 400;
@@ -84,31 +84,31 @@
   line-height: 12px;
   color: #ee3465;
 }
-.Register__link:hover, .Register__button:hover {
+.register__link:hover, .register__button:hover {
     opacity: 0.8;
 }
-.Register__validation-disable {
+.register__validation-disable {
   display: none;
 }
-.Register__err {
+.register__error {
   color: #ee3465;
 }
 @media screen and (max-width: 500px) {
-  .Register__label {
+  .register__label {
     max-width: 260px;
   }
-  .Register__container {
+  .register__container {
     align-items: center;
     max-width: 320px;
   }
-  .Register__button {
+  .register__button {
     margin-top: 198px;
     width: 260px;
     font-size: 12px;
     line-height: 14px;
     margin-bottom: 14px;
   }
-  .Register__reg {
+  .register__caption {
     font-size: 12px;
     line-height: 15px;
   }

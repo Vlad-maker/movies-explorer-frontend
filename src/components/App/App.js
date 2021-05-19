@@ -1,26 +1,26 @@
 import "./App.css";
 import React from "react";
 import { Route, Switch } from "react-router";
+import Header from "../Header/Header";
 import Main from "../Main/Main";
 import Movies from "../Movies/Movies";
 import SavedMovies from "../SavedMovies/SavedMovies";
-import Profile from "../Profile/Profile";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
-import Header from "../Header/Header";
-import { CurrentUserContext } from "../../contexts/CurrentUserContext";
+import Profile from "../Profile/Profile";
 import Footer from "../Footer/Footer";
 import PageNotFound from "../PageNotFound/PageNotFound";
+import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 
 const App = () => {
 
   const [loggedIn, setLoggedIn] = React.useState(false);
   const [disableFooter, setDisableFooter] = React.useState(false);
 
-  function handleLoggenIn() {
+  function handleLoggedIn() {
     setLoggedIn(true);
   }
-  function handleLoggenInFalse() {
+  function handleLoggedInFalse() {
     setLoggedIn(false);
   }
   function handleDisableFooter() {
@@ -30,19 +30,19 @@ const App = () => {
   return (
     <CurrentUserContext.Provider value={""}>
       <div className="page">
-        <Header loggedIn={loggedIn} handleLoggenIn={handleLoggenIn} setLoggedIn={setLoggedIn}/>
+        <Header loggedIn={loggedIn} handleLoggedIn={handleLoggedIn} setLoggedIn={setLoggedIn}/>
         <Switch>
           <Route exact path="/">
-            <Main handleLoggenIn={handleLoggenInFalse}/>
+            <Main handleLoggedIn={handleLoggedInFalse}/>
           </Route>
           <Route path="/movies">
-            <Movies handleLoggenIn={handleLoggenIn}/>
+            <Movies handleLoggedIn={handleLoggedIn}/>
           </Route>
           <Route path="/saved-movies">
-            <SavedMovies handleLoggenIn={handleLoggenIn}/>
+            <SavedMovies handleLoggedIn={handleLoggedIn}/>
           </Route>
           <Route path="/profile">
-            <Profile handleLoggenIn={handleLoggenIn}/>
+            <Profile handleLoggedIn={handleLoggedIn}/>
           </Route>
           <Route exact path="/signin">
             <Login />

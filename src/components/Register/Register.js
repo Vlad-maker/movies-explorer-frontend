@@ -38,12 +38,12 @@ const Register = () => {
   }
 
   return (
-    <section className="Register">
-      <div className="Register__container">
-        <label className="Register__label">
-          <p className="Register__text">Имя</p>
+    <section className="register">
+      <div className="register__container">
+        <label className="register__label">
+          <p className="register__text">Имя</p>
           <input
-            className="Register__input"
+            className="register__input"
             type="text"
             size="44"
             maxLength="40"
@@ -51,15 +51,15 @@ const Register = () => {
             onChange={handleChangeName}
             value={name || ""}
           ></input>
-          <span className="Register__validation"></span>
+          <span className="register__validation"></span>
         </label>
-        <label className="Register__label">
-          <p className="Register__text" type="email">
+        <label className="register__label">
+          <p className="register__text" type="email">
             E-mail
           </p>
           <input
-            className={`Register__input ${
-              emailError.length === 0 ? "" : "Register__err"
+            className={`register__input ${
+              emailError.length === 0 ? "" : "register__error"
             }`}
             onChange={handleValidationEmail}
             value={email || ""}
@@ -67,13 +67,13 @@ const Register = () => {
             type="text"
             name="email"
           ></input>
-          <span className="Register__validation">{emailError}</span>
+          <span className="register__validation">{emailError}</span>
         </label>
-        <label className="Register__label">
-          <p className="Register__text">Пароль</p>
+        <label className="register__label">
+          <p className="register__text">Пароль</p>
           <input
-            className={`Register__input ${
-              passwordError.length === 0 ? "" : "Register__err"
+            className={`register__input ${
+              passwordError.length === 0 ? "" : "register__error"
             }`}
             type="password"
             size="44"
@@ -81,14 +81,14 @@ const Register = () => {
             onChange={handleValidationPassword}
             value={password || ""}
           ></input>
-          <span className="Register__validation">{passwordError}</span>
+          <span className="register__validation">{passwordError}</span>
         </label>
-        <button className="Register__button" type="button">
+        <button className="register__button" type="button">
           Зарегестрироваться
         </button>
-        <p className="Register__reg">
+        <p className="register__caption">
           Уже зарегестрированы?
-          <Link className="Register__link" to="/signin">
+          <Link className="register__link" to="/signin">
             &nbsp;Войти
           </Link>
         </p>

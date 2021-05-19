@@ -11,13 +11,11 @@
   position: absolute;
   top: 25px;
   right: 120px;
-
   width: 28px;
   height: 28px;
-
-  cursor: pointer;
   z-index: 2;
   transition: opacity 0.5s linear;
+  cursor: pointer;
 }
 .hamburger:hover {
     opacity: 0.8;
