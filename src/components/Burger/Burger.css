@@ -96,6 +96,11 @@
 }
 @media screen and (max-width: 1050px) {
   .hamburger {
+    right: 142px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .hamburger {
     right: 30px;
   }
 }

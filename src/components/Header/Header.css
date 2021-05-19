@@ -210,6 +210,9 @@
     .header__reg{
         margin-left: 600px;
     }
+    .header__container {
+        max-width: 812px;
+    }
 }
 @media screen and (max-width: 1050px) {
     .header__logo {

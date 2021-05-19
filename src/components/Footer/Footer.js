@@ -16,9 +16,9 @@ const Footer = (props) => {
       }`}
     >
       <div className="footer__container">
-        <h2 className="footer__header">
+        <a className="footer__header" href="/movies">
           Учебный проект Яндекс.Практикум x BeatFilm.
-        </h2>
+        </a>
         <div className="footer__block">
           <p className="footer__copyright">&copy; {new Date().getFullYear()}</p>
           <ul className="footer__social">
@@ -35,16 +35,6 @@ const Footer = (props) => {
             <li className="footer__link">
               <a
                 className="footer__text"
-                href="https://github.com/Vlad-maker"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Github
-              </a>
-            </li>
-            <li className="footer__link">
-              <a
-                className="footer__text"
                 href="https://www.facebook.com/profile.php?id=100000976609772"
                 target="_blank"
                 rel="noreferrer"
@@ -52,6 +42,17 @@ const Footer = (props) => {
                 Facebook
               </a>
             </li>
+            <li className="footer__link">
+              <a
+                className="footer__text"
+                href="https://github.com/Vlad-maker"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Github
+              </a>
+            </li>
+            
           </ul>
         </div>
       </div>

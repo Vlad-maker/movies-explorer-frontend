@@ -13,28 +13,26 @@
     row-gap: 30px;
     column-gap: 24px;
     padding: 0;
-    margin-top: 70px;
+    margin-top: 40px;
 }
 
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: 1180px) {
     .MoviesCardList__container-movies  {
-        grid-template-columns: repeat(3, 270px);
+        grid-template-columns: repeat(2, 364px);
     }
 }
-@media screen and (max-width: 920px){
-    .MoviesCardList__container-movies  {
-        grid-template-columns: repeat(2, 340px);
-        row-gap: 30px;
-        column-gap: 30px;
-    }
-}
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .MoviesCardList__container-movies{
-        grid-template-columns: repeat(2, 280px);
+        grid-template-columns: repeat(2, 339px);
+        grid-auto-rows: 258px;
+        row-gap: 36px;
+        column-gap: 30px;
     }   
 }
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 700px) {
     .MoviesCardList__container-movies{
         grid-template-columns: repeat(1, 300px);
+        grid-auto-rows: 236px;
+        row-gap: 16px;
     }   
 }
