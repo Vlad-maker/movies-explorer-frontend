@@ -8,9 +8,11 @@ const MoviesCard = (props) => {
         <h2 className="moviesCard__text">{props.title}</h2>
         <p className="moviesCard__time">1ч 42м</p>
       </div>
-      <button className="moviesCard__like cards__like_active"></button>
+      <button className="moviesCard__like"></button>
       <img className="moviesCard__image" src={photo} alt="Обложка фильма"></img>
     </div>
   );
 };
 export default MoviesCard;
+
+

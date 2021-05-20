@@ -20,7 +20,7 @@
 }
 .moviesCard__text {
     width: 280px;
-    font-family: Inter;
+    font-family: "Inter", "Arial", sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: 15px;
@@ -32,7 +32,9 @@
 .moviesCard__like {
     border: none;
     outline: none;
-    background-color: #2BE080;
+    background-image: url('../../../images/notsaved.svg');
+    background-repeat: no-repeat;
+    background-position: center;
     border-radius: 50px;
     width: 30px;
     height: 30px;
@@ -41,20 +43,15 @@
     transition: opacity 0.2s linear; 
 }
 .moviesCard__like:hover {
-    opacity: 0.8;
+    opacity: 0.7;
+    background-image: url('../../../images/savedmovie.svg');
 }
 .cards__like_active{
-    background-image: url('../../../images/savedmovie.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.cards__like_inactive{
-    background-image: url('../../../images/notsaved.svg');
     background-repeat: no-repeat;
     background-position: center;
 }
 .moviesCard__time {
-    font-family: Inter;
+    font-family: "Inter", "Arial", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 11px;

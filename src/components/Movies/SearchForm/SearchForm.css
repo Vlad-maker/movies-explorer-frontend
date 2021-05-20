@@ -28,12 +28,19 @@
     background-color: #ffffff;
     margin: 12px 0 12px;
     color: #8b8b8b;
-    font-family: Inter;
+    font-family: "Inter", "Arial", sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: 28px;
     line-height: 34;
 }
+
+.searchForm__film:hover {
+    transition: opacity 0.3s linear;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
 .searchForm__button {
     background-color: #FF6838;
     border-radius: 48px;
@@ -47,7 +54,7 @@
     text-decoration: none;
     outline: none;
     border: none;
-    transition: opacity .5s linear;
+    transition: opacity 0.3s linear;
 }
 .searchForm__button:hover {
     opacity: 0.8;
@@ -58,7 +65,7 @@
 }
 .searchForm__text {
     margin: 0;
-    font-family: Inter;
+    font-family: "Inter", "Arial", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 13px;
@@ -74,10 +81,8 @@
         max-width: 850px;
     }
     .searchForm__block {
-        margin: 33px 0 48px 87px;
-    }
-    .searchForm__text {
-       
+        width: 850px;
+        margin: 33px auto 48px;
     }
     .searchForm__film {
         margin-right: 0;
@@ -92,7 +97,8 @@
         max-width: 752px;
     }
     .searchForm__block {
-        margin: 33px 0 48px 137px;
+        max-width: 752px;
+        margin: 33px auto 48px ;
     }
     .searchForm__film {
         margin-right: 0;
@@ -108,12 +114,25 @@
         max-width: 710px;
     }
     .searchForm__block {
+        max-width: 165px;
         margin: 38px 30px 57px auto;
     }
     .searchForm__button {
         margin: 7px 0 7px;
     }
 }   
+
+@media screen and (max-width: 745px) {
+    .searchForm__block {
+        margin: 38px 15px 57px auto;
+    }  
+} 
+
+@media screen and (max-width: 745px) {
+    .searchForm__block {
+        margin: 38px 3px 57px auto;
+    }  
+}
 
 @media screen and (max-width: 550px) {
     .searchForm__block {

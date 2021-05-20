@@ -16,7 +16,7 @@
     text-align: center;
     border-bottom: 1px solid #E8E8E8;
     padding: 0 0 20px 0;
-    font-family: Inter;
+    font-family: "Inter", "Arial", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 13px;
@@ -38,7 +38,7 @@
 }
 
 .footer__copyright {
-    font-family: Inter;
+    font-family: "Inter", "Arial", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 13px;
@@ -60,7 +60,7 @@
     margin: 0;
 }
 .footer__text {
-    font-family: Inter;
+    font-family: "Inter", "Arial", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 13px;

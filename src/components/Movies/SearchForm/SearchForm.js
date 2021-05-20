@@ -8,7 +8,7 @@ const SearchForm = () => {
     <section className="searchForm">
       <div className="searchForm__container">
           <label className="searchForm__search" >
-              <input className="searchForm__film"  placeholder="Фильм" size="30"></input>
+              <input className="searchForm__film"  placeholder="Фильм" size="30" required></input>
               <button className="searchForm__button"><img className="searchForm__image" src={icon} alt="icon"></img></button>
           </label>
           <div className="searchForm__block">

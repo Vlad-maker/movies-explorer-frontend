@@ -11,7 +11,7 @@
     flex-direction: column;
 }
 .portfolio__header {
-    font-family: Inter;
+    font-family: "Inter", "Arial", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
@@ -37,7 +37,7 @@
     border: none;
 }
 .portfolio__caption {
-    font-family: Inter;
+    font-family: "Inter", "Arial", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
