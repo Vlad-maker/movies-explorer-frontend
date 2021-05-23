@@ -1,0 +1,12 @@
+.moviesCardList {
+    margin: 0;
+    width: 100%;
+}
+.moviesCardList__container-low {
+    margin-bottom: 240px;
+}
+@media screen and (max-width: 800px) {
+    .moviesCardList__container-low {
+        margin-bottom: 150px;
+    }
+}

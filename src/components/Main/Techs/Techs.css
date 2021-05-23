@@ -1,0 +1,120 @@
+@import url("../../../vendor/fonts/Inter/inter.css");
+
+.techs {
+  background-color: #F5F5F5;
+  width: 100%;
+  margin: 0;
+}
+.techs__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.techs__text {
+  margin: 0 auto;
+  width: 1140px;
+  margin-top: 100px;
+}
+
+.techs__block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.techs__header {
+  max-width: 600px;
+  text-align: center;
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  line-height: 58px;
+  letter-spacing: -0.04em;
+  margin: 90px 0 26px 0;
+  color: #000;
+}
+.techs__caption {
+  max-width: 460px;
+  text-align: center;
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.04em;
+  margin: 0 0 100px 0;
+  color: #000;
+}
+.techs__list {
+  list-style: none;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(7, 90px);
+  column-gap: 10px;
+  margin-bottom: 100px;
+  padding: 0;
+}
+.techs__column {
+  max-height: 60px;
+  background-color: #E8E8E8;
+  border-radius: 10px;
+  color: #000;
+  text-align: center;
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -0.04em;
+  padding: 21px 0 21px 0;
+}
+.techs__column:last-child{
+    margin-right: 0px;
+}
+
+@media screen and (max-width: 1150px){
+  .techs__column {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .techs__list{
+    grid-template-columns: repeat(7, 84px);
+    margin-bottom: 90px;
+  }
+  .techs__caption{
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .techs__list {
+    grid-template-rows: (2, 55px);
+    grid-template-columns: repeat(5, 84px);
+    row-gap: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .techs__list {
+  grid-template-columns: repeat(4, 84px);
+  }
+}
+@media screen and (max-width: 550px) {
+  .techs__list {
+    grid-template-columns: repeat(2, 84px);
+    margin-bottom: 70px;
+  }
+  .techs__header {
+    font-size: 30px;
+    line-height: 37px;
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+  .techs__caption {
+    font-size: 11px;
+    line-height: 16px;
+    margin-bottom: 50px;
+  }
+}

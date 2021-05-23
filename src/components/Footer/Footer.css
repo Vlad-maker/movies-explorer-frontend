@@ -1,0 +1,126 @@
+@import url("../../vendor/fonts/Inter/inter.css");
+
+.footer {
+    background-color: #FAFAFA;
+    width: 100%;
+}
+.footer__container{
+    max-width: 1140px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.footer__header {
+    max-width: 1140px;
+    margin: 80px 0 0 0;
+    text-align: center;
+    border-bottom: 1px solid #E8E8E8;
+    padding: 0 0 20px 0;
+    font-family: "Inter", "Arial", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: #8b8b8b;
+    text-decoration: none;
+}
+.footer__block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 0 0 0;
+    max-width: 1140px;
+}
+
+.footer__header:hover {
+    transition: opacity 0.2s linear;
+    opacity: 0.8;
+}
+
+.footer__copyright {
+    font-family: "Inter", "Arial", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: #A0A0A0;
+    margin: 0 0 20px 0;
+}
+.footer__social {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+.footer__link {
+    margin: 0 0 0 20px;
+}
+.footer__link:first-child{
+    margin: 0;
+}
+.footer__text {
+    font-family: "Inter", "Arial", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.2s linear;
+}
+.footer__text:hover{
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 1180px) {
+    .footer__container {
+        max-width: 708px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .footer__container {
+        max-width: 560px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .footer__container {
+        max-width: 500px;
+    }
+}
+@media  screen and (max-width: 550px) {
+    .footer__container {
+        max-width: 370px;
+    }
+    .footer__heading{
+        margin-top: 45px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .footer__block{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .footer__link {
+        margin: 12px 0 0 0;
+    }
+    .footer__social {
+        flex-direction: column;
+    }
+    .footer__copyright{
+        margin: 30px 0 10px 0;
+        font-size: 12px;
+        line-height: 14.5px;
+    }
+    .footer__text {
+        font-size: 12px;
+        line-height: 14.5px;
+        margin-right: 0px;
+    }
+}
+@media  screen and (max-width: 375px) {
+    .footer__container {
+        max-width: 300px;
+    }
+}
