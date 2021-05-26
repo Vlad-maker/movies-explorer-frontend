@@ -11,6 +11,18 @@ import Profile from "../Profile/Profile";
 import Footer from "../Footer/Footer";
 import PageNotFound from "../PageNotFound/PageNotFound";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
+import { getMovies } from "../../utils/MoviesApi";
+import useWindowWidth from "../../hook/windowWidth";
+import {
+  login,
+  register,
+  saveMovie,
+  deleteMovie,
+  authApiToken,
+  getSavedMovies,
+  getProfileData,
+  updateProfileData,
+} from "../../utils/MainApi";
 
 const App = () => {
 
