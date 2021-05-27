@@ -1,22 +1,63 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import "./Profile.css";
+import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 
 const Profile = (props) => {
+  const currentUser = useContext(CurrentUserContext);
+
   useEffect(() => {
-    props.handleLoggedIn();
-  });
-  const [name, setName] = useState("Виталий");
-  const [email, setEmail] = useState("pochta@yandex.ru");
-  const handleChangeName = (evt) => {
-    setName(evt.target.value);
-  };
-  const handleChangeEmail = (evt) => {
+    props.handleLoggenIn();
+    setName(currentUser.name);
+    setEmail(currentUser.email);
+  }, [currentUser.name, currentUser.email, props])
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [emailError, setEmailError] = useState("");
+  const [nameError, setNameError] = useState("");
+  const [nameValid, setNameValid] = useState(false);
+  const [emailValid, setEmailValid] = useState(false);
+
+
+  const handleValidationEmail = (evt) => {
     setEmail(evt.target.value);
+    // eslint-disable-next-line
+    const val = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    if (!evt.target.value) {
+      setEmailError("Email не может быть пустым");
+      setEmailValid(false);
+    } else if (!val.test(String(evt.target.value).toLowerCase())) {
+      setEmailError("Некорректный email");
+      setEmailValid(false);
+    } else {
+      setEmailError("");
+      setEmailValid(true);
+    }
   };
+
+  const handleValidationName = (evt) => {
+    setName(evt.target.value);
+    if (!evt.target.value) {
+      setNameError("Имя не должно быть пустым");
+      setNameValid(false);
+    } else if (evt.target.value.length <= 2) {
+      setNameError("Имя должно быть больше двух символов");
+      setNameValid(false);
+    } else {
+      setNameError("");
+      setNameValid(true);
+    }
+  };
+ 
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    props.handleChangeUser(name, email);
+  };
+
   return (
     <section className="profile">
       <div className="profile__container">
-        <h2 className="profile__heading"> Привет, {name}!</h2>
+        <h2 className="profile__heading"> Привет, {currentUser.name}!</h2>
         <label className="profile__label">
           <p className="profile__input">Имя</p>
           <input
@@ -28,9 +69,10 @@ const Profile = (props) => {
             name="name"
             minLength="2"
             required
-            onChange={handleChangeName}
+            onChange={handleValidationName}
           ></input>
         </label>
+        <span className="register__validation">{nameError}</span>
         <label className="profile__block">
           <p className="profile__input">E-mail</p>
           <input
@@ -39,11 +81,22 @@ const Profile = (props) => {
             id="email-input"
             value={email || ""}
             required
-            onChange={handleChangeEmail}
+            onChange={handleValidationEmail}
           ></input>
         </label>
-        <button className="profile__edit">Редактировать</button>
-        <button className="profile__logOut">Выйти из аккаунта</button>
+        <span className="register__validation">{emailError}</span>
+        <p className="text__error">{props.messageProfile}</p>
+        <button 
+        className={`profile__edit ${
+          nameValid && emailValid ? "" : "profile__edit-disable"
+        }`}
+        disabled={nameValid && emailValid ? false : true}
+        type="submit"
+        onClick={handleSubmit}
+      >Редактировать</button>
+        <button className="profile__logOut" onClick={props.handleLogOut}>
+          Выйти из аккаунта
+          </button>
       </div>
     </section>
   );
