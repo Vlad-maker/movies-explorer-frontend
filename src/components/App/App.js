@@ -45,7 +45,7 @@ const App = () => {
   const history = useHistory();
   const windowWidth = useWindowWidth();
 
-  // Получение информации о пользователе
+  // Инфо о пользователе
   useEffect(() => {
     if(loggedIn) {
       getProfileData()
@@ -55,7 +55,7 @@ const App = () => {
       .catch((err) => console.log(err));
     }
   }, [loggedIn]);
-  // Получение токена
+  // Получаем токен
   useEffect(() => {
     const jwt = localStorage.getItem("jwt");
     if (jwt) {
@@ -67,7 +67,8 @@ const App = () => {
       });
     } // eslint-disable-next-line
   }, []);
-  // Получение фильмов
+
+  // Получаем массив фильмов
   useEffect(() => {
     setIsLoaded(true);
     if (!localStorage.getItem("movies")) {
@@ -85,7 +86,8 @@ const App = () => {
   const editMovies = () => {
     setOfMovies(true);
   };
-  // Получение сохраненных карточек
+
+  // Получаем сохраненные фильмы
   useEffect(() => {
     if(loggedIn) {
       getSavedMovies()
@@ -99,7 +101,7 @@ const App = () => {
     }
   }, [loggedIn]);
 
-  // Добавление фильмов в сохраненные
+  // Сохраняем фильм в свою коллекцию
   const handleSaveMovie = (movie) => {
     console.log(movie);
     if (movie.nameRU !== savedMovies.some((item) => item.nameRU)) {
@@ -112,7 +114,7 @@ const App = () => {
     }
   };
 
-  // Удаление фильмов
+  // Удаляем фильм
   const handleRemoveSaveMovie = (movieId) => {
     return deleteMovie(movieId)
       .then((_) => {
@@ -122,7 +124,8 @@ const App = () => {
       })
       .catch((err) => console.log(err));
   };
-  // Регистрация пользователя
+
+  // Региструем пользователя
   const handleRegisterUser = (name, email, password) => {
     register(name, email, password)
       .then((res) => {
@@ -135,7 +138,7 @@ const App = () => {
       });
   };
 
-  // Авторизация пользователя
+  // Авторизируем пользователя
   const handleLoginUser = (email, password) => {
     login(email, password)
       .then((res) => {
@@ -156,7 +159,7 @@ const App = () => {
     }, 2500);
   };
 
-  //Изменение профиля
+  //Обновление данных профиля
   const handleChangeUser = (name, email) => {
     updateProfileData(name, email)
       .then((res) => {
@@ -165,7 +168,8 @@ const App = () => {
       })
       .catch((err) => console.log(err));
   };
-  // Выход
+
+  // Выход из профиля
   const handleLogOut = () => {
     localStorage.removeItem("jwt");
     setLoggedIn(false);
