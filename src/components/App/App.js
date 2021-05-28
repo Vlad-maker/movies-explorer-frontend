@@ -1,6 +1,6 @@
 import "./App.css";
-import React from "react";
-import { Route, Switch } from "react-router";
+import React, { useEffect } from "react";
+import { Route, Switch, useHistory, useLocation  } from "react-router";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 import Movies from "../Movies/Movies";
@@ -33,6 +33,8 @@ const App = () => {
   const [isLoaded, setIsLoaded] = React.useState(false);
   const [search, setSearch] = React.useState("");
   const [savedSearch, setSavedSearch] = React.useState("");
+  const localStorageMovies = JSON.parse(localStorage.getItem("movies"));
+  const [savedMovies, setSavedMovies] = React.useState([]);
   const [isMovies, setOfMovies] = React.useState(false);
   const [filteredMovies, setFilteredMovies] = React.useState([]);
   const [filteredSavedMovieList, setFilteredSavedMovieList] = React.useState(
@@ -76,12 +78,12 @@ const App = () => {
       });
     } else {
       setIsLoaded(false);
-      setIsMovies(true);
+      setOfMovies(true);
     }
   }, [loggedIn]);
 
   const editMovies = () => {
-    setIsMovies(true);
+    setOfMovies(true);
   };
   // Получение сохраненных карточек
   useEffect(() => {
@@ -196,19 +198,19 @@ const App = () => {
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="page">
-        <Header loggedIn={loggedIn} handleLoggenIn={handleLoggenIn} />
+        <Header loggedIn={loggedIn} handleLoggedIn={handleLoggedIn} />
         <Switch>
           <Route
             exact
             path="/"
             component={Main}
-            handleLoggenIn={handleLoggenInFalse}
+            handleLoggenIn={handleLoggedInFalse}
           ></Route>
           <ProtectedRoute
             exact
             path="/movies"
             component={Movies}
-            handleLoggenIn={handleLoggenIn}
+            handleLoggedIn={handleLoggedIn}
             localStorageMovies={localStorageMovies}
             loggedIn={loggedIn}
             handleSearch={handleSearch}
@@ -228,7 +230,7 @@ const App = () => {
           <ProtectedRoute
             path="/saved-movies"
             component={SavedMovies}
-            handleLoggenIn={handleLoggenIn}
+            handleLoggedIn={handleLoggedIn}
             handleRemoveSaveMovie={handleRemoveSaveMovie}
             savedMovies={savedMovies}
             loggedIn={loggedIn}
@@ -242,7 +244,7 @@ const App = () => {
           <ProtectedRoute
             path="/profile"
             component={Profile}
-            handleLoggenIn={handleLoggenIn}
+            handleLoggedIn={handleLoggedIn}
             loggedIn={loggedIn}
             handleLogOut={handleLogOut}
             handleChangeUser={handleChangeUser}

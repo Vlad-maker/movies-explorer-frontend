@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Register.css";
 
-const Register = () => {
+const Register = (props) => {
   const [name, setName] = useState("Виталий");
   const [email, setEmail] = useState("pochta@yandex.ru");
   const [password, setPassword] = useState("asdasq");
@@ -72,7 +72,7 @@ const Register = () => {
           <p className="register__text">Имя</p>
           <input
             className={`register__input ${
-              nameError.length === 0 ? "" : "Register__err"
+              nameError.length === 0 ? "" : "register__error"
             }`}
             type="text"
             size="44"
@@ -117,7 +117,7 @@ const Register = () => {
                 className={`register__button${
                   nameValid && passwordValid && emailValid
                     ? ""
-                    : "Register__button-disable"
+                    : "register__button-disable"
                 }`}
                 disabled={nameValid && passwordValid && emailValid ? false : true}
                 >
