@@ -1,5 +1,5 @@
 ### [movies-explorer](https://b.movies.nomoredomains.club/)
-### Frontend для киносайта movies-explorer
+
 ***
 #### Технологии:
 

@@ -85,7 +85,10 @@ const Header = (props) => {
       className={`header ${
         props.loggedIn ||
         locationLink.pathname === "/signup" ||
-        locationLink.pathname === "/signin"
+        locationLink.pathname === "/signin" ||
+        locationLink.pathname === "/movies" ||
+        locationLink.pathname === "/saved-movies" ||
+        locationLink.pathname === "/profile"
       }`}
       id="header"
     >

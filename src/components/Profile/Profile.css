@@ -76,8 +76,13 @@
     line-height: 16px;
     cursor: pointer;
     outline: none;
-    transition: opacity .5s linear;
+    transition: opacity 0.3s linear;
 }
+
+.profile__edit-disable {
+    opacity: 0.5;
+}
+
 .profile__logOut {
     font-family: "Inter", "Arial", sans-serif;
     font-weight: 500;
