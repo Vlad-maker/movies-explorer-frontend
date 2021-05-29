@@ -6,7 +6,7 @@ const Profile = (props) => {
   const currentUser = useContext(CurrentUserContext);
 
   useEffect(() => {
-    props.handleLoggenIn();
+    props.handleLoggedIn();
     setName(currentUser.name);
     setEmail(currentUser.email);
   }, [currentUser.name, currentUser.email, props])

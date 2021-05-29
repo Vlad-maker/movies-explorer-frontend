@@ -23,6 +23,9 @@
 .movies__button:hover {
     opacity: 0.8;
 }
+.movies__button-disable {
+    display: none;
+}
 .movies__block {
     margin: 0;
     display: flex;
