@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import "./Register.css";
 
 const Register = (props) => {
-  const [name, setName] = useState("Виталий");
-  const [email, setEmail] = useState("pochta@yandex.ru");
-  const [password, setPassword] = useState("asdasq");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [nameError, setNameError] = useState("");
@@ -113,7 +113,7 @@ const Register = (props) => {
           ></input>
           <span className="register__validation">{passwordError}</span>
         </label>
-        <button type="button"
+        <button type="submit"
                 className={`register__button${
                   nameValid && passwordValid && emailValid
                     ? ""

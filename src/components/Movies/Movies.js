@@ -9,8 +9,8 @@ const Movies = (props) => {
   let moviesCount;
   let moviesCountNew;
 
-  if (props.windowWidth > 930) {
-    moviesCount = 9;
+  if (props.windowWidth > 920) {
+    moviesCount = 12;
     moviesCountNew = 3;
   } else if (props.windowWidth > 500) {
     moviesCount = 8;
@@ -66,7 +66,7 @@ const Movies = (props) => {
         <button className={`movies__button ${
             numberMovies >= props.filteredMovies.length &&
             numberMovies >= props.localStorageMovies.length
-              ? "Movies__button-disable"
+              ? "movies__button-disable"
               : ""
           }`}
           type="button"

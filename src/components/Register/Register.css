@@ -59,6 +59,10 @@
   cursor: pointer;
   transition: opacity 0.2s linear;
 }
+.register__button-disable {
+  cursor: default;
+  background-color: #202020;
+}
 .register__caption {
   font-family: "Inter", "Arial", sans-serif;
   font-weight: 400;
