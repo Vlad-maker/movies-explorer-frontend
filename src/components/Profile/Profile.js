@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./Profile.css";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 
@@ -6,7 +6,7 @@ const Profile = (props) => {
   const currentUser = useContext(CurrentUserContext);
 
   useEffect(() => {
-    props.handleLoggedIn();
+    props.handleLoggenIn();
     setName(currentUser.name);
     setEmail(currentUser.email);
   }, [currentUser.name, currentUser.email, props])

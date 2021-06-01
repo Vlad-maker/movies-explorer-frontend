@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Login = (props) => {
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
@@ -49,49 +48,51 @@ const Login = (props) => {
   };
 
   return (
-    <section className="register">
-      <div className="register__container" onSubmit={handleSubmit}>
-        <label className="register__label">
-          <p className="register__text" type="email">
+    <section className="Register">
+      <form className="Register__container" onSubmit={handleSubmit}>
+        <label className="Register__label">
+          <p className="Register__text" type="email">
             E-mail
           </p>
-          <input className={`register__input ${
-              emailError.length === 0 ? "" : "register__error"
-            }`}
-                size="44" 
-                onChange={handleValidationEmail}
-                value={email || ""}
-                ></input>
-          <span className="register__validation">{emailError}</span>
-        </label>
-        <label className="register__label">
-          <p className="register__text">Пароль</p>
           <input
-            className={`register__input ${
-              passwordError.length === 0 ? "" : "register__error"
+            className={`Register__input ${
+              emailError.length === 0 ? "" : "Register__err"
+            }`}
+            size="44"
+            onChange={handleValidationEmail}
+            value={email || ""}
+          ></input>
+          <span className="Register__validation">{emailError}</span>
+        </label>
+        <label className="Register__label">
+          <p className="Register__text">Пароль</p>
+          <input
+            className={`Register__input ${
+              passwordError.length === 0 ? "" : "Register__err"
             }`}
             type="password"
             size="44"
             onChange={handleValidationPassword}
             value={password || ""}
           ></input>
-          <span className="register__validation">{passwordError}</span>
+          <span className="Register__validation">{passwordError}</span>
         </label>
-        <button className={`register__button ${
-            emailValid && passwordValid ? "" : "register__button-disable"
+        <button
+          className={`Register__button ${
+            emailValid && passwordValid ? "" : "Register__button-disable"
           }`}
           disabled={passwordValid && emailValid ? false : true}
           type="submit"
-          >
+        >
           Войти
         </button>
-        <p className="register__caption register__caption-login">
+        <p className="Register__reg Register__reg-login">
           Еще не зарегестрированы?
-          <Link className="register__link" to="/signup">
-          &nbsp;Регистрация
+          <Link className="Register__link" to="/signup">
+            &nbsp;Регистрация
           </Link>
         </p>
-      </div>
+      </form>
     </section>
   );
 };

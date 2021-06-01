@@ -26,7 +26,7 @@ const Burger = () => {
             Сохраненные фильмы
           </Link>
         </li>
-        <li className="header__burger-section header__burger_section_profile">
+        <li className="header__account_btn header__account_btn-burger">
         <Link className="header__profile header__profile-burger" to="/profile">
             Аккаунт
           </Link>

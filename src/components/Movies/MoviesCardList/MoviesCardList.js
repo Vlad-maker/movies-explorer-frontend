@@ -8,8 +8,8 @@ const MoviesCardList = (props) => {
         props.movieCard.length === 0 ? (
           <p className="text__error">Ничего не найдено</p>
         ) : (
-      <div className="moviesCardList__container-movies">
-      {props.movieCard.map((item) => {
+          <div className="moviesCardList__container-movies">
+            {props.movieCard.map((item) => {
               return (
                 <MoviesCard
                   movie={item}
@@ -22,8 +22,8 @@ const MoviesCardList = (props) => {
                 />
               );
             })}
-      </div>
-      )
+          </div>
+        )
       ) : (
         <p className="text__error">
           Нажмите кнопку или введите конкретный фильм

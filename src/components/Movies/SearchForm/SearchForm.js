@@ -1,5 +1,5 @@
 import "./SearchForm.css";
-import icon from '../../../images/find.svg'
+import icon from "../../../images/find.svg";
 import FilterCheckbox from "../FilterCheckbox/FilterCheckbox";
 import { useState } from "react";
 
@@ -72,23 +72,24 @@ const handleSubmit = (e) => {
   return (
     <section className="searchForm">
       <div className="searchForm__container">
-          <form className="searchForm__search" onSubmit={props.isToggle ? handleSubmitSaved : handleSubmit}>
-              <input className="searchForm__film"  
-              placeholder="Фильм" 
-              size="30" 
-              value={props.isToggle ?  props.savedSearch : props.value}
-              onChange={props.isToggle ? props.handleSearchSaved : props.handleSearch}></input>
-              <button className="searchForm__button" onClick={props.editMovies} type="submit">
-              <img className="searchForm__image" src={icon} alt="icon"></img>
-              </button>
-          </form>
-          <div className="searchForm__block">
-              <p className="searchForm__text">Короткометражки</p>
-              <FilterCheckbox onChange={checkBoxToggle} />
-          </div>
+        <form className="searchForm__search" onSubmit={props.isToggle ? handleSubmitSaved : handleSubmit}>
+          <input
+            className="searchForm__film"
+            placeholder="Фильм"
+            size="30"
+            value={props.isToggle ?  props.savedSearch : props.value}
+            onChange={props.isToggle ? props.handleSearchSaved : props.handleSearch}
+          ></input>
+          <button className="searchForm__button" onClick={props.editMovies} type="submit">
+            <img className="searchForm__image" src={icon} alt="иконка"></img>
+          </button>
+        </form>
+        <div className="searchForm__block">
+          <p className="searchForm__text">Короткометражки</p>
+          <FilterCheckbox onChange={checkBoxToggle} />
+        </div>
       </div>
     </section>
   );
 };
 export default SearchForm;
-

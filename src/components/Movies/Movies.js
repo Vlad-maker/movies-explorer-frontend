@@ -5,12 +5,11 @@ import { useEffect, useState } from "react";
 import Preloader from "../Preloader/Preloader";
 
 const Movies = (props) => {
-
   let moviesCount;
   let moviesCountNew;
 
   if (props.windowWidth > 920) {
-    moviesCount = 12;
+    moviesCount = 9;
     moviesCountNew = 3;
   } else if (props.windowWidth > 500) {
     moviesCount = 8;
@@ -19,7 +18,7 @@ const Movies = (props) => {
     moviesCount = 5;
     moviesCountNew = 2;
   }
-   
+
   const [numberMovies, setNumberMovies] = useState(moviesCount);
 
   const nubmerOfMovies = () => {
@@ -27,10 +26,8 @@ const Movies = (props) => {
   };
 
   useEffect(() => {
-    props.handleLoggedIn();
+    props.handleLoggenIn();
   });
-
-
   return (
     <section className="movies">
       <SearchForm
@@ -63,14 +60,18 @@ const Movies = (props) => {
         />
       )}
       <div className="movies__block">
-        <button className={`movies__button ${
+        <button
+          className={`movies__button ${
             numberMovies >= props.filteredMovies.length &&
             numberMovies >= props.localStorageMovies.length
               ? "movies__button-disable"
               : ""
           }`}
           type="button"
-          onClick={nubmerOfMovies}>Ещё</button>
+          onClick={nubmerOfMovies}
+        >
+          Еще
+        </button>
       </div>
     </section>
   );

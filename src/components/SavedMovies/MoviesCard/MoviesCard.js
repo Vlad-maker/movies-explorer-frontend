@@ -1,5 +1,5 @@
 import "./MoviesCard.css";
-import noImage from "../../../images/skeletonimage.jpg";
+import noImage from "../../../images/no_image.jpg";
 
 const MoviesCard = (props) => {
   const timeConvert = (time) => {

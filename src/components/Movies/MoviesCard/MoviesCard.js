@@ -1,8 +1,7 @@
 import "./MoviesCard.css";
-import noImage from "../../../images/skeletonimage.jpg";
+import noImage from "../../../images/no_image.jpg";
 
 const MoviesCard = (props) => {
-
   const movieCard = props.movie;
   const movieURL = "https://api.nomoreparties.co";
   const timeConvert = (time) => {
@@ -49,7 +48,6 @@ const MoviesCard = (props) => {
     props.handleRemoveSaveMovie(selectCard._id);
   };
 
-
   return (
     <div className="moviesCard">
       <div className="moviesCard__block">
@@ -77,5 +75,3 @@ const MoviesCard = (props) => {
   );
 };
 export default MoviesCard;
-
-

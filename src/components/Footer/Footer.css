@@ -73,6 +73,9 @@
 .footer__text:hover{
     opacity: 0.8;
 }
+.footer__disable{
+    display: none;
+}
 
 @media screen and (max-width: 1180px) {
     .footer__container {

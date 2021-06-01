@@ -12,6 +12,7 @@ const useWindowWidth = () => {
       setWindowWidth(window.innerWidth);
     }
     if (userWindow) {
+      // Слушатель на изменение окна
       window.addEventListener('resize', setWidth);
       return () => window.removeEventListener('resize', setWidth);
     }

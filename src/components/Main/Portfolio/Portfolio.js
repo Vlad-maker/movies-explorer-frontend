@@ -30,7 +30,7 @@ const Portfolio = () => {
             </a>
           </li>
           <li className="portfolio__column">
-            <p className="portfolio__caption">Одностраничное приложение</p>
+            <p className="portfolio__caption">SPA-приложение</p>
             <a
               className="portfolio__link"
               href="https://mestop.nomoredomains.club/"

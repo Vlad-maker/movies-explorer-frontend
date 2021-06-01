@@ -8,7 +8,10 @@ const Footer = (props) => {
       className={`footer ${
         locationLink.pathname === "/profile" ||
         locationLink.pathname === "/signup" ||
-        locationLink.pathname === "/signin" 
+        locationLink.pathname === "/signin" ||
+        props.disableFooter
+          ? "footer__disable"
+          : ""
       }`}
     >
       <div className="footer__container">

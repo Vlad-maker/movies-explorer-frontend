@@ -1,32 +1,31 @@
 import "./App.css";
 import React, { useEffect } from "react";
-import { Route, Switch, useHistory, useLocation  } from "react-router";
-import Header from "../Header/Header";
+import { Route, Switch, useHistory, useLocation } from "react-router";
 import Main from "../Main/Main";
 import Movies from "../Movies/Movies";
 import SavedMovies from "../SavedMovies/SavedMovies";
+import Profile from "../Profile/Profile";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
-import Profile from "../Profile/Profile";
+import Header from "../Header/Header";
+import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import Footer from "../Footer/Footer";
 import PageNotFound from "../PageNotFound/PageNotFound";
-import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import { getMovies } from "../../utils/MoviesApi";
-import useWindowWidth from "../../hook/windowWidth";
+import useWindowWidth from "../../hooks/windowWidth";
 import {
-  login,
-  register,
-  saveMovie,
-  deleteMovie,
-  authApiToken,
+  addToSavedMovies,
+  removeSaveMovie,
   getSavedMovies,
-  getProfileData,
-  updateProfileData,
+  register,
+  login,
+  authApiToken,
+  getUserInfo,
+  updateUserInfo,
 } from "../../utils/MainApi";
 import ProtectedRoute from "../ProtectedRoute";
 
 const App = () => {
-
   const [loggedIn, setLoggedIn] = React.useState(false);
   const [disableFooter, setDisableFooter] = React.useState(false);
   const [currentUser, setCurrentUser] = React.useState({});
@@ -35,7 +34,7 @@ const App = () => {
   const [savedSearch, setSavedSearch] = React.useState("");
   const localStorageMovies = JSON.parse(localStorage.getItem("movies"));
   const [savedMovies, setSavedMovies] = React.useState([]);
-  const [isMovies, setOfMovies] = React.useState(false);
+  const [isMovies, setIsMovies] = React.useState(false);
   const [filteredMovies, setFilteredMovies] = React.useState([]);
   const [filteredSavedMovieList, setFilteredSavedMovieList] = React.useState(
     []
@@ -45,17 +44,17 @@ const App = () => {
   const history = useHistory();
   const windowWidth = useWindowWidth();
 
-  // Инфо о пользователе
+  // Получение информации о пользователе
   useEffect(() => {
     if(loggedIn) {
-      getProfileData()
+      getUserInfo()
       .then((res) => {
         setCurrentUser(res);
       })
       .catch((err) => console.log(err));
     }
   }, [loggedIn]);
-  // Получаем токен
+  // Получение токена
   useEffect(() => {
     const jwt = localStorage.getItem("jwt");
     if (jwt) {
@@ -67,8 +66,7 @@ const App = () => {
       });
     } // eslint-disable-next-line
   }, []);
-
-  // Получаем массив фильмов
+  // Получение фильмов
   useEffect(() => {
     setIsLoaded(true);
     if (!localStorage.getItem("movies")) {
@@ -79,15 +77,14 @@ const App = () => {
       });
     } else {
       setIsLoaded(false);
-      setOfMovies(true);
+      setIsMovies(true);
     }
   }, [loggedIn]);
 
   const editMovies = () => {
-    setOfMovies(true);
+    setIsMovies(true);
   };
-
-  // Получаем сохраненные фильмы
+  // Получение сохраненных карточек
   useEffect(() => {
     if(loggedIn) {
       getSavedMovies()
@@ -101,11 +98,32 @@ const App = () => {
     }
   }, [loggedIn]);
 
-  // Сохраняем фильм в свою коллекцию
+  const handleSearch = (evt) => {
+    setSearch(evt.target.value);
+  };
+  const handleSearchSaved = (evt) => {
+    setSavedSearch(evt.target.value);
+  };
+  const addFilteredMovie = (value) => {
+    setFilteredMovies(value);
+  };
+  const updateFilteredSavedMovies = (value) => {
+    setFilteredSavedMovieList(value);
+  };
+  function handleLoggenIn() {
+    setLoggedIn(true);
+  }
+  function handleLoggenInFalse() {
+    setLoggedIn(false);
+  }
+  function handleDisableFooter() {
+    setDisableFooter(true);
+  }
+  // Добавление фильмов в сохраненные
   const handleSaveMovie = (movie) => {
     console.log(movie);
     if (movie.nameRU !== savedMovies.some((item) => item.nameRU)) {
-      return saveMovie(movie)
+      return addToSavedMovies(movie)
         .then((saveMovie) => {
           setSavedMovies([saveMovie, ...savedMovies]);
           setFilteredSavedMovieList([saveMovie, ...filteredSavedMovieList]);
@@ -114,9 +132,9 @@ const App = () => {
     }
   };
 
-  // Удаляем фильм
+  // Удаление фильмов
   const handleRemoveSaveMovie = (movieId) => {
-    return deleteMovie(movieId)
+    return removeSaveMovie(movieId)
       .then((_) => {
         const upMovieList = savedMovies.filter((i) => i._id !== movieId);
         setSavedMovies(upMovieList);
@@ -124,8 +142,7 @@ const App = () => {
       })
       .catch((err) => console.log(err));
   };
-
-  // Региструем пользователя
+  // Регистрация пользователя
   const handleRegisterUser = (name, email, password) => {
     register(name, email, password)
       .then((res) => {
@@ -138,7 +155,7 @@ const App = () => {
       });
   };
 
-  // Авторизируем пользователя
+  // Авторизация пользователя
   const handleLoginUser = (email, password) => {
     login(email, password)
       .then((res) => {
@@ -159,62 +176,38 @@ const App = () => {
     }, 2500);
   };
 
-  //Обновление данных профиля
+  //Изменение профиля
   const handleChangeUser = (name, email) => {
-    updateProfileData(name, email)
+    updateUserInfo(name, email)
       .then((res) => {
         setCurrentUser(res);
         handleMessage("Данные обновлены успешно!");
       })
       .catch((err) => console.log(err));
   };
-
-  // Выход из профиля
+  // Выход
   const handleLogOut = () => {
     localStorage.removeItem("jwt");
     setLoggedIn(false);
     history.push("/");
   };
 
-  const handleSearch = (evt) => {
-    setSearch(evt.target.value);
-  };
-  const handleSearchSaved = (evt) => {
-    setSavedSearch(evt.target.value);
-  };
-  const addFilteredMovie = (value) => {
-    setFilteredMovies(value);
-  };
-  const updateFilteredSavedMovies = (value) => {
-    setFilteredSavedMovieList(value);
-  };
-
-  function handleLoggedIn() {
-    setLoggedIn(true);
-  }
-  function handleLoggedInFalse() {
-    setLoggedIn(false);
-  }
-  function handleDisableFooter() {
-    setDisableFooter(true);
-  }
-
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="page">
-        <Header loggedIn={loggedIn} handleLoggedIn={handleLoggedIn} />
+        <Header loggedIn={loggedIn} handleLoggenIn={handleLoggenIn} />
         <Switch>
           <Route
             exact
             path="/"
             component={Main}
-            handleLoggenIn={handleLoggedInFalse}
+            handleLoggenIn={handleLoggenInFalse}
           ></Route>
           <ProtectedRoute
             exact
             path="/movies"
             component={Movies}
-            handleLoggedIn={handleLoggedIn}
+            handleLoggenIn={handleLoggenIn}
             localStorageMovies={localStorageMovies}
             loggedIn={loggedIn}
             handleSearch={handleSearch}
@@ -234,7 +227,7 @@ const App = () => {
           <ProtectedRoute
             path="/saved-movies"
             component={SavedMovies}
-            handleLoggedIn={handleLoggedIn}
+            handleLoggenIn={handleLoggenIn}
             handleRemoveSaveMovie={handleRemoveSaveMovie}
             savedMovies={savedMovies}
             loggedIn={loggedIn}
@@ -248,7 +241,7 @@ const App = () => {
           <ProtectedRoute
             path="/profile"
             component={Profile}
-            handleLoggedIn={handleLoggedIn}
+            handleLoggenIn={handleLoggenIn}
             loggedIn={loggedIn}
             handleLogOut={handleLogOut}
             handleChangeUser={handleChangeUser}

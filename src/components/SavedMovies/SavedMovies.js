@@ -1,18 +1,17 @@
 import { useEffect } from "react";
 import SearchForm from "../Movies/SearchForm/SearchForm";
 import Preloader from "../Preloader/Preloader";
-import SavedMoviesCard from '../SavedMovies/MoviesCardList/MoviesCardList';
-import './SavedMovies.css'
+import SavedMoviesCard from "../SavedMovies/MoviesCardList/MoviesCardList";
+import "./SavedMovies.css";
 
 const SavedMovies = (props) => {
+  useEffect(() => {
+    props.handleLoggenIn();
+  });
 
-    useEffect(() => {
-        props.handleLoggedIn();
-    });
-
-    return(
-        <section className="savedMovies">
-            <SearchForm
+  return (
+    <section className="savedMovies">
+      <SearchForm
         handleSearchSaved={props.handleSearchSaved}
         isToggle={props.isToggle}
         savedSearch={props.savedSearch}
@@ -29,7 +28,7 @@ const SavedMovies = (props) => {
           filteredSavedMovieList={props.filteredSavedMovieList}
         />
       )}
-        </section>
-    );
-}
+    </section>
+  );
+};
 export default SavedMovies;
