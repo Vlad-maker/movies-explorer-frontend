@@ -1,4 +1,4 @@
-const MAIN_API_URL = 'http://localhost:3000';
+const MAIN_API_URL = 'moviesexplorer.nomoredomains.club';
 
 function responce(res) {
   if (res.ok) {
