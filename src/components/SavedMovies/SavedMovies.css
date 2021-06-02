@@ -2,3 +2,6 @@
     width: 100%;
     margin: 0;
 }
+.text__error-saved {
+    font-family: 'Inter', 'Arial', 'sans-serif';
+}

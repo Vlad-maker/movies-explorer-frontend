@@ -1,4 +1,4 @@
-const BASE_MAIN_URL = 'http://localhost:3000';
+const MAIN_API_URL = 'http://localhost:3000';
 
 function responce(res) {
   if (res.ok) {
@@ -11,7 +11,7 @@ function responce(res) {
 }
 
 export const getUserInfo = () => {
-  return fetch(`${BASE_MAIN_URL}/users/me`, {
+  return fetch(`${MAIN_API_URL}/users/me`, {
     headers: {
       Authorization: `Bearer ${localStorage.getItem("jwt")}`,
       'Content-Type': 'application/json',
@@ -22,7 +22,7 @@ export const getUserInfo = () => {
 };
 
 export const register = (name, email, password) => {
-  return fetch(`${BASE_MAIN_URL}/signup`, {
+  return fetch(`${MAIN_API_URL}/signup`, {
     method: 'POST',
     mode: 'cors',
     headers: {
@@ -36,7 +36,7 @@ export const register = (name, email, password) => {
 };
 
 export const login = (email, password) => {
-  return fetch(`${BASE_MAIN_URL}/signin`, {
+  return fetch(`${MAIN_API_URL}/signin`, {
     method: 'POST',
     mode: 'cors',
     headers: {
@@ -51,7 +51,7 @@ export const login = (email, password) => {
 };
 
 export const getSavedMovies = () => {
-  return fetch(`${BASE_MAIN_URL}/movies`, {
+  return fetch(`${MAIN_API_URL}/movies`, {
     method: 'GET',
     headers: {
       Authorization: `Bearer ${localStorage.getItem("jwt")}`,
@@ -63,7 +63,7 @@ export const getSavedMovies = () => {
 };
 
 export const addToSavedMovies = (movie) => {
-  return fetch(`${BASE_MAIN_URL}/movies`, {
+  return fetch(`${MAIN_API_URL}/movies`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ export const addToSavedMovies = (movie) => {
 };
 
 export const removeSaveMovie = (movie) => {
-  return fetch(`${BASE_MAIN_URL}/movies/${movie}`, {
+  return fetch(`${MAIN_API_URL}/movies/${movie}`, {
     method: 'DELETE',
     headers: {
       Authorization: `Bearer ${localStorage.getItem("jwt")}`,
@@ -88,7 +88,7 @@ export const removeSaveMovie = (movie) => {
 };
 
 export const authApiToken = (tokenn) => {
-    return fetch(`${BASE_MAIN_URL}/users/me`, {
+    return fetch(`${MAIN_API_URL}/users/me`, {
       method: "GET",
       headers: {
         'Accept': "application/json",
@@ -104,7 +104,7 @@ export const authApiToken = (tokenn) => {
   };
 
 export const updateUserInfo = (names, emails) => {
-  return fetch(`${BASE_MAIN_URL}/users/me`, {
+  return fetch(`${MAIN_API_URL}/users/me`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',

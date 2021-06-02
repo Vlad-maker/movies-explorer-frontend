@@ -6,7 +6,7 @@ import "./SavedMovies.css";
 
 const SavedMovies = (props) => {
   useEffect(() => {
-    props.handleLoggenIn();
+    props.handleLogin();
   });
 
   return (
@@ -23,7 +23,7 @@ const SavedMovies = (props) => {
       ) : (
         <SavedMoviesCard
           savedMovies={props.savedMovies}
-          handleRemoveSaveMovie={props.handleRemoveSaveMovie}
+          removeSavedMovie={props.removeSavedMovie}
           isToggle={props.isToggle}
           filteredSavedMovieList={props.filteredSavedMovieList}
         />

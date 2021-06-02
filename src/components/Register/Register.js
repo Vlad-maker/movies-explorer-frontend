@@ -13,7 +13,7 @@ const Register = (props) => {
   const [passwordValid, setPasswodValid] = useState(false);
   const [emailValid, setEmailValid] = useState(false);
 
-  const handleValidationName = (evt) => {
+  const validateName = (evt) => {
     evt.preventDefault();
     setName(evt.target.value);
     if (!evt.target.value) {
@@ -28,7 +28,7 @@ const Register = (props) => {
     }
   };
 
-  const handleValidationEmail = (evt) => {
+  const validateEmail = (evt) => {
     evt.preventDefault();
     setEmail(evt.target.value);
     // eslint-disable-next-line
@@ -45,7 +45,7 @@ const Register = (props) => {
     }
   };
 
-  const handleValidationPassword = (evt) => {
+  const validatePassword = (evt) => {
     evt.preventDefault();
     setPassword(evt.target.value);
     if (!evt.target.value) {
@@ -66,67 +66,67 @@ const Register = (props) => {
   }
 
   return (
-    <section className="Register">
-      <form className="Register__container" onSubmit={handleRegister}>
-        <label className="Register__label">
-          <p className="Register__text">Имя</p>
+    <section className="register">
+      <form className="register__container" onSubmit={handleRegister}>
+        <label className="register__label">
+          <p className="register__text">Имя</p>
           <input
-            className={`Register__input ${
-              nameError.length === 0 ? "" : "Register__err"
+            className={`register__input ${
+              nameError.length === 0 ? "" : "register__error"
             }`}
             type="text"
             size="44"
             maxLength="40"
             minLength="2"
-            onChange={handleValidationName}
+            onChange={validateName}
             value={name || ""}
           ></input>
-          <span className="Register__validation">{nameError}</span>
+          <span className="register__validation">{nameError}</span>
         </label>
-        <label className="Register__label">
-          <p className="Register__text" type="email">
+        <label className="register__label">
+          <p className="register__text" type="email">
             E-mail
           </p>
           <input
-            className={`Register__input ${
-              emailError.length === 0 ? "" : "Register__err"
+            className={`register__input ${
+              emailError.length === 0 ? "" : "register__error"
             }`}
-            onChange={handleValidationEmail}
+            onChange={validateEmail}
             value={email || ""}
             size="44"
             type="text"
             name="email"
           ></input>
-          <span className="Register__validation">{emailError}</span>
+          <span className="register__validation">{emailError}</span>
         </label>
-        <label className="Register__label">
-          <p className="Register__text">Пароль</p>
+        <label className="register__label">
+          <p className="register__text">Пароль</p>
           <input
-            className={`Register__input ${
-              passwordError.length === 0 ? "" : "Register__err"
+            className={`register__input ${
+              passwordError.length === 0 ? "" : "register__error"
             }`}
             type="password"
             size="44"
             name="password"
-            onChange={handleValidationPassword}
+            onChange={validatePassword}
             value={password || ""}
           ></input>
-          <span className="Register__validation">{passwordError}</span>
+          <span className="register__validation">{passwordError}</span>
         </label>
         <button
           type="submit"
-          className={`Register__button ${
+          className={`register__button ${
             nameValid && passwordValid && emailValid
               ? ""
-              : "Register__button-disable"
+              : "register__button-disable"
           }`}
           disabled={nameValid && passwordValid && emailValid ? false : true}
         >
           Зарегестрироваться
         </button>
-        <p className="Register__reg">
+        <p className="register__caption">
           Уже зарегестрированы?
-          <Link className="Register__link" to="/signin">
+          <Link className="register__link" to="/signin">
             &nbsp;Войти
           </Link>
         </p>

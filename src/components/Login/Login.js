@@ -10,7 +10,7 @@ const Login = (props) => {
   const [passwordValid, setPasswodValid] = useState(false);
   const [emailValid, setEmailValid] = useState(false);
 
-  const handleValidationEmail = (evt) => {
+  const validateEmail = (evt) => {
     evt.preventDefault();
     setEmail(evt.target.value);
     // eslint-disable-next-line
@@ -27,7 +27,7 @@ const Login = (props) => {
     }
   };
 
-  const handleValidationPassword = (evt) => {
+  const validatePassword = (evt) => {
     evt.preventDefault();
     setPassword(evt.target.value);
     if (!evt.target.value) {
@@ -48,47 +48,47 @@ const Login = (props) => {
   };
 
   return (
-    <section className="Register">
-      <form className="Register__container" onSubmit={handleSubmit}>
-        <label className="Register__label">
-          <p className="Register__text" type="email">
+    <section className="register">
+      <form className="register__container" onSubmit={handleSubmit}>
+        <label className="register__label">
+          <p className="register__text" type="email">
             E-mail
           </p>
           <input
-            className={`Register__input ${
-              emailError.length === 0 ? "" : "Register__err"
+            className={`register__input ${
+              emailError.length === 0 ? "" : "register__error"
             }`}
             size="44"
-            onChange={handleValidationEmail}
+            onChange={validateEmail}
             value={email || ""}
           ></input>
-          <span className="Register__validation">{emailError}</span>
+          <span className="register__validation">{emailError}</span>
         </label>
-        <label className="Register__label">
-          <p className="Register__text">Пароль</p>
+        <label className="register__label">
+          <p className="register__text">Пароль</p>
           <input
-            className={`Register__input ${
-              passwordError.length === 0 ? "" : "Register__err"
+            className={`register__input ${
+              passwordError.length === 0 ? "" : "register__error"
             }`}
             type="password"
             size="44"
-            onChange={handleValidationPassword}
+            onChange={validatePassword}
             value={password || ""}
           ></input>
-          <span className="Register__validation">{passwordError}</span>
+          <span className="register__validation">{passwordError}</span>
         </label>
         <button
-          className={`Register__button ${
-            emailValid && passwordValid ? "" : "Register__button-disable"
+          className={`register__button ${
+            emailValid && passwordValid ? "" : "register__button-disable"
           }`}
           disabled={passwordValid && emailValid ? false : true}
           type="submit"
         >
           Войти
         </button>
-        <p className="Register__reg Register__reg-login">
+        <p className="register__caption ">
           Еще не зарегестрированы?
-          <Link className="Register__link" to="/signup">
+          <Link className="register__link" to="/signup">
             &nbsp;Регистрация
           </Link>
         </p>

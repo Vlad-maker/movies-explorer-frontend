@@ -17,7 +17,7 @@ const MoviesCardList = (props) => {
                   handleSaveMovie={props.handleSaveMovie}
                   savedMovies={props.savedMovies}
                   isToggle={props.isToggle}
-                  handleRemoveSaveMovie={props.handleRemoveSaveMovie}
+                  removeSavedMovie={props.removeSavedMovie}
                   handleDisableIsLoaded={props.handleDisableIsLoaded}
                 />
               );

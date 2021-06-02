@@ -11,7 +11,7 @@ const MoviesCardList = (props) => {
               <MoviesCard
                 key={item._id}
                 movie={item}
-                handleRemoveSaveMovie={props.handleRemoveSaveMovie}
+                removeSavedMovie={props.removeSavedMovie}
                 isToggle={props.isToggle}
               />
             );
@@ -19,7 +19,7 @@ const MoviesCardList = (props) => {
         </div>
       ) : (
         <p className="text__error text__error-saved">
-          У вас нет сохраненных фильмов
+          У вас нет сохраненных фильмов c таким названием
         </p>
       )}
     </section>

@@ -1,5 +1,5 @@
 import "./MoviesCard.css";
-import noImage from "../../../images/no_image.jpg";
+import skeletonImage from "../../../images/skeleton.jpg";
 
 const MoviesCard = (props) => {
   const timeConvert = (time) => {
@@ -9,9 +9,9 @@ const MoviesCard = (props) => {
       return Math.floor(time / 60) + " ч " + (time % 60) + " м";
     }
   };
-  const handleDeleteMovies = (evt) => {
+  const handleDeleteMovie = (evt) => {
     evt.preventDefault();
-    props.handleRemoveSaveMovie(props.movie._id);
+    props.removeSavedMovie(props.movie._id);
   };
 
   return (
@@ -21,7 +21,7 @@ const MoviesCard = (props) => {
         <p className="moviesCard__time">{timeConvert(props.movie.duration)}</p>
       </div>
       <button className="moviesCard__button"
-              onClick={handleDeleteMovies}
+              onClick={handleDeleteMovie}
       ></button>
       <a
         className="movieCard__link"
@@ -30,7 +30,7 @@ const MoviesCard = (props) => {
         rel="noreferrer"
       >
       <img className="moviesCard__image"
-          src={`${props.movie.image === null ? noImage : props.movie.image}`}
+          src={`${props.movie.image === null ? skeletonImage : props.movie.image}`}
           alt="Обложка фильма"></img>
       </a>
     </div>

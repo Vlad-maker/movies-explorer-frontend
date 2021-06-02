@@ -17,14 +17,14 @@ const SearchForm = (props) => {
     return filtered;
   };
 
-  const handleSavedFiltered = (savedMovieList, savedMovieSearch) => {
+  const handleSavedMoviesFilter = (savedMovieList, savedMovieSearch) => {
     const savedFiltered = savedMovieList.nameRU
       .toLowerCase()
       .includes(savedMovieSearch.toLowerCase());
     return savedFiltered;
   };
 
-  const filteringMoviesArray = (movieList, value) => {
+  const filterMoviesArray = (movieList, value) => {
     if (filterCheck) {
       const shortMovie = movieList.filter((movie) => {
         return movie.duration <= 40 && handleFilter(movie, value);
@@ -38,17 +38,17 @@ const SearchForm = (props) => {
     }
   };
 
-  const filteringSavedMoviesArray = (savedMovieList, savedMovieSearch) => {
+  const filterSavedMoviesArray = (savedMovieList, savedMovieSearch) => {
     if (filterCheck) {
       const shortSavedMovie = savedMovieList.filter((movie) => {
         return (
-          movie.duration <= 40 && handleSavedFiltered(movie, savedMovieSearch)
+          movie.duration <= 40 && handleSavedMoviesFilter(movie, savedMovieSearch)
         );
       });
       return shortSavedMovie;
     } else {
       const filteredSavedMovies = savedMovieList.filter((movie) => {
-        return handleSavedFiltered(movie, savedMovieSearch);
+        return handleSavedMoviesFilter(movie, savedMovieSearch);
       });
       return filteredSavedMovies;
     }
@@ -56,13 +56,13 @@ const SearchForm = (props) => {
   
 const handleSubmit = (e) => {
      e.preventDefault();
-    const filteredMoviesArray = filteringMoviesArray(props.localStorageMovies, props.value);
+    const filteredMoviesArray = filterMoviesArray(props.localStorageMovies, props.value);
     props.addFilteredMovie(filteredMoviesArray);
   };
 
-  const handleSubmitSaved = (e) => {
+  const handleSubmitSave = (e) => {
     e.preventDefault();
-    let filteredSavedMoviesArray = filteringSavedMoviesArray(
+    let filteredSavedMoviesArray = filterSavedMoviesArray(
       props.savedMovies,
       props.savedSearch
     );
@@ -72,7 +72,7 @@ const handleSubmit = (e) => {
   return (
     <section className="searchForm">
       <div className="searchForm__container">
-        <form className="searchForm__search" onSubmit={props.isToggle ? handleSubmitSaved : handleSubmit}>
+        <form className="searchForm__search" onSubmit={props.isToggle ? handleSubmitSave : handleSubmit}>
           <input
             className="searchForm__film"
             placeholder="Фильм"

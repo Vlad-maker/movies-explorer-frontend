@@ -6,7 +6,7 @@ const Profile = (props) => {
   const currentUser = useContext(CurrentUserContext);
 
   useEffect(() => {
-    props.handleLoggenIn();
+    props.handleLogin();
     setName(currentUser.name);
     setEmail(currentUser.email);
   }, [currentUser.name, currentUser.email, props])
@@ -19,7 +19,7 @@ const Profile = (props) => {
   const [emailValid, setEmailValid] = useState(false);
 
 
-  const handleValidationEmail = (evt) => {
+  const validateEmail = (evt) => {
     setEmail(evt.target.value);
     // eslint-disable-next-line
     const val = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
@@ -35,7 +35,7 @@ const Profile = (props) => {
     }
   };
 
-  const handleValidationName = (evt) => {
+  const validateName = (evt) => {
     setName(evt.target.value);
     if (!evt.target.value) {
       setNameError("Имя не должно быть пустым");
@@ -69,7 +69,7 @@ const Profile = (props) => {
             name="name"
             minLength="2"
             required
-            onChange={handleValidationName}
+            onChange={validateName}
           ></input>
         </label>
         <span className="register__validation">{nameError}</span>
@@ -81,7 +81,7 @@ const Profile = (props) => {
             id="email-input"
             value={email || ""}
             required
-            onChange={handleValidationEmail}
+            onChange={validateEmail}
           ></input>
         </label>
         <span className="register__validation">{emailError}</span>

@@ -1,5 +1,5 @@
 import "./MoviesCard.css";
-import noImage from "../../../images/no_image.jpg";
+import skeletonImage from "../../../images/skeleton.jpg";
 
 const MoviesCard = (props) => {
   const movieCard = props.movie;
@@ -19,7 +19,7 @@ const MoviesCard = (props) => {
     handleSetSavedMovie ? "cards__like_active" : ""
   }`;
 
-  const handleMoviesSave = (evt) => {
+  const handleSaveMovie = (evt) => {
     evt.preventDefault();
     if (handleSetSavedMovie) {
       return;
@@ -40,12 +40,12 @@ const MoviesCard = (props) => {
     props.handleSaveMovie(movie);
   };
 
-  const handleRemoveMovies = (evt) => {
+  const handleRemoveMovie = (evt) => {
     evt.preventDefault();
     const selectCard = props.savedMovies.find(
       (item) => item.movieId === movieCard.id
     );
-    props.handleRemoveSaveMovie(selectCard._id);
+    props.removeSavedMovie(selectCard._id);
   };
 
   return (
@@ -57,7 +57,7 @@ const MoviesCard = (props) => {
       <button 
           className={checkLikeMovies}
           type="button"
-          onClick={handleSetSavedMovie ? handleRemoveMovies : handleMoviesSave}></button>
+          onClick={handleSetSavedMovie ? handleRemoveMovie : handleSaveMovie}></button>
       <a
         className="movieCard__link"
         href={props.movie.trailerLink}
@@ -67,7 +67,7 @@ const MoviesCard = (props) => {
       <img className="moviesCard__image" 
       src={`${
         props.movie.image === null
-          ? noImage
+          ? skeletonImage
           : `https://api.nomoreparties.co${props.movie.image.url}`
       }`} alt="Обложка фильма"></img>
       </a>

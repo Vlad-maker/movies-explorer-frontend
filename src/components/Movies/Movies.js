@@ -26,7 +26,7 @@ const Movies = (props) => {
   };
 
   useEffect(() => {
-    props.handleLoggenIn();
+    props.handleLogin();
   });
   return (
     <section className="movies">
@@ -56,7 +56,7 @@ const Movies = (props) => {
           handleSaveMovie={props.handleSaveMovie}
           savedMovies={props.savedMovies}
           isToggle={props.isToggle}
-          handleRemoveSaveMovie={props.handleRemoveSaveMovie}
+          removeSavedMovie={props.removeSavedMovie}
         />
       )}
       <div className="movies__block">
