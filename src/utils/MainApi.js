@@ -1,4 +1,4 @@
-const MAIN_API_URL = 'moviesexplorer.nomoredomains.club';
+const MAIN_API_URL = 'https://moviesexplorer.nomoredomains.club';
 
 function responce(res) {
   if (res.ok) {
@@ -13,7 +13,7 @@ function responce(res) {
 export const getUserInfo = () => {
   return fetch(`${MAIN_API_URL}/users/me`, {
     headers: {
-      Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+      'Authorization': `Bearer ${localStorage.getItem("jwt")}`,
       'Content-Type': 'application/json',
     },
   })
@@ -24,9 +24,8 @@ export const getUserInfo = () => {
 export const register = (name, email, password) => {
   return fetch(`${MAIN_API_URL}/signup`, {
     method: 'POST',
-    mode: 'cors',
     headers: {
-      Accept: 'application/json',
+      'Accept': 'application/json',
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({ name, email, password }),
@@ -38,11 +37,10 @@ export const register = (name, email, password) => {
 export const login = (email, password) => {
   return fetch(`${MAIN_API_URL}/signin`, {
     method: 'POST',
-    mode: 'cors',
     headers: {
-      Accept: 'application/json',
+      'Accept': 'application/json',
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+      'Authorization': `Bearer ${localStorage.getItem("jwt")}`,
     },
     body: JSON.stringify({ email, password }),
   })
@@ -54,7 +52,7 @@ export const getSavedMovies = () => {
   return fetch(`${MAIN_API_URL}/movies`, {
     method: 'GET',
     headers: {
-      Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+      'Authorization': `Bearer ${localStorage.getItem("jwt")}`,
       'Content-Type': 'application/json',
     },
   })
@@ -67,7 +65,7 @@ export const addToSavedMovies = (movie) => {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+      'Authorization': `Bearer ${localStorage.getItem("jwt")}`,
     },
     body: JSON.stringify(movie),
   })
@@ -79,7 +77,7 @@ export const removeSaveMovie = (movie) => {
   return fetch(`${MAIN_API_URL}/movies/${movie}`, {
     method: 'DELETE',
     headers: {
-      Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+      'Authorization': `Bearer ${localStorage.getItem("jwt")}`,
       'Content-Type': 'application/json',
     },
   })
@@ -108,7 +106,7 @@ export const updateUserInfo = (names, emails) => {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+      'Authorization' : `Bearer ${localStorage.getItem("jwt")}`,
     },
     body: JSON.stringify({
       name: names,

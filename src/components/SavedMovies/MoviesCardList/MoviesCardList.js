@@ -19,7 +19,7 @@ const MoviesCardList = (props) => {
         </div>
       ) : (
         <p className="text__error text__error-saved">
-          У вас нет сохраненных фильмов c таким названием
+          У вас нет сохраненных фильмов
         </p>
       )}
     </section>
