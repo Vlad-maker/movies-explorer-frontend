@@ -1,14 +1,27 @@
 import "./MoviesCardList.css";
-import MoviesCard from '../MoviesCard/MoviesCard';
+import MoviesCard from "../MoviesCard/MoviesCard";
 
-const MoviesCardList = () => {
+const MoviesCardList = (props) => {
   return (
     <section className="moviesCardList">
-      <div className="moviesCardList__container-movies moviesCardList__container-low">
-        <MoviesCard title={"33 слова о дизайне"} />
-        <MoviesCard title={"33 слова о дизайне"} />
-        <MoviesCard title={"33 слова о дизайне"} />
-      </div>
+      {props.filteredSavedMovieList.length !== 0 ? (
+        <div className="moviesCardList__container-movies moviesCardList__container-low">
+          {props.filteredSavedMovieList.map((item) => {
+            return (
+              <MoviesCard
+                key={item._id}
+                movie={item}
+                removeSavedMovie={props.removeSavedMovie}
+                isToggle={props.isToggle}
+              />
+            );
+          })}
+        </div>
+      ) : (
+        <p className="text__error text__error-saved">
+          У вас нет сохраненных фильмов
+        </p>
+      )}
     </section>
   );
 };

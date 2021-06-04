@@ -22,7 +22,8 @@
 }
 .register__text {
   margin: 0 0 5px 0;
-  font-family: "Inter", "Arial", sans-serif;
+  text-rendering: optimizeLegibility;
+  font-family: 'Inter', 'Arial', 'Helvetica';
   font-weight: 400;
   font-style: normal;
   font-size: 10px;
@@ -40,7 +41,7 @@
   font-style: normal;
   font-size: 14px;
   line-height: 17px;
-  border-bottom: 1px solid #FF6838;
+  border-bottom: 1px solid #424242;
 }
 .register__button {
   background-color: #FF6838;
@@ -49,7 +50,8 @@
   outline: none;
   border: none;
   color: #fff;
-  font-family: "Inter", "Arial", sans-serif;
+  text-rendering: optimizeLegibility;
+  font-family: 'Inter', 'Arial', 'Helvetica';
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
@@ -57,10 +59,16 @@
   border-radius: 3px;
   margin: 134px 0 16px 0;
   cursor: pointer;
-  transition: opacity 0.2s linear;
+  transition: opacity 0.1s linear;
+}
+.register__button-disable {
+  cursor: pointer;
+  background-color: #FF6838;
+  opacity: 0.7;
 }
 .register__caption {
-  font-family: "Inter", "Arial", sans-serif;
+  text-rendering: optimizeLegibility;
+  font-family: 'Inter', 'Arial', 'Helvetica';
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
@@ -73,11 +81,12 @@
   color: #FF6838;
   cursor: pointer;
   text-decoration: none;
-  transition: opacity 0.2s linear;
+  transition: opacity 0.3s linear;
 }
 .register__validation {
   margin: 6px 0 0 0;
-  font-family: "Inter", "Arial", sans-serif;
+  text-rendering: optimizeLegibility;
+  font-family: 'Inter', 'Arial', 'Helvetica';
   font-weight: 400;
   font-style: normal;
   font-size: 10px;

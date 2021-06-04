@@ -2,56 +2,86 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Register.css";
 
-const Register = () => {
-  const [name, setName] = useState("Виталий");
-  const [email, setEmail] = useState("pochta@yandex.ru");
-  const [password, setPassword] = useState("asdasq");
+const Register = (props) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+  const [nameError, setNameError] = useState("");
+  const [nameValid, setNameValid] = useState(false);
+  const [passwordValid, setPasswodValid] = useState(false);
+  const [emailValid, setEmailValid] = useState(false);
 
-  const handleValidationEmail = (evt) => {
+  const validateName = (evt) => {
+    evt.preventDefault();
+    setName(evt.target.value);
+    if (!evt.target.value) {
+      setNameError("Имя не должно быть пустым");
+      setNameValid(false);
+    } else if (evt.target.value.length <= 2) {
+      setNameError("Имя должно быть больше двух символов");
+      setNameValid(false);
+    } else {
+      setNameError("");
+      setNameValid(true);
+    }
+  };
+
+  const validateEmail = (evt) => {
+    evt.preventDefault();
     setEmail(evt.target.value);
     // eslint-disable-next-line
     const val = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
     if (!evt.target.value) {
       setEmailError("Email не может быть пустым");
+      setEmailValid(false);
     } else if (!val.test(String(evt.target.value).toLowerCase())) {
       setEmailError("Некорректный email");
+      setEmailValid(false);
     } else {
       setEmailError("");
+      setEmailValid(true);
     }
   };
 
-  const handleValidationPassword = (evt) => {
+  const validatePassword = (evt) => {
+    evt.preventDefault();
     setPassword(evt.target.value);
     if (!evt.target.value) {
       setPasswordError("Пароль не может быть пустым");
+      setPasswodValid(false);
     } else if (evt.target.value.length < 8) {
       setPasswordError("Пароль должен содержать не менее 8 символов");
+      setPasswodValid(false);
     } else {
       setPasswordError("");
+      setPasswodValid(true);
     }
   };
 
-  const handleChangeName = (evt) => {
-    setName(evt.target.value);
+  const handleRegister = (evt) => {
+    evt.preventDefault();
+    props.handleRegisterUser(name, email, password);
   }
 
   return (
     <section className="register">
-      <div className="register__container">
+      <form className="register__container" onSubmit={handleRegister}>
         <label className="register__label">
           <p className="register__text">Имя</p>
           <input
-            className="register__input"
+            className={`register__input ${
+              nameError.length === 0 ? "" : "register__error"
+            }`}
             type="text"
             size="44"
             maxLength="40"
             minLength="2"
-            onChange={handleChangeName}
+            onChange={validateName}
             value={name || ""}
           ></input>
-          <span className="register__validation"></span>
+          <span className="register__validation">{nameError}</span>
         </label>
         <label className="register__label">
           <p className="register__text" type="email">
@@ -61,7 +91,7 @@ const Register = () => {
             className={`register__input ${
               emailError.length === 0 ? "" : "register__error"
             }`}
-            onChange={handleValidationEmail}
+            onChange={validateEmail}
             value={email || ""}
             size="44"
             type="text"
@@ -78,12 +108,20 @@ const Register = () => {
             type="password"
             size="44"
             name="password"
-            onChange={handleValidationPassword}
+            onChange={validatePassword}
             value={password || ""}
           ></input>
           <span className="register__validation">{passwordError}</span>
         </label>
-        <button className="register__button" type="button">
+        <button
+          type="submit"
+          className={`register__button ${
+            nameValid && passwordValid && emailValid
+              ? ""
+              : "register__button-disable"
+          }`}
+          disabled={nameValid && passwordValid && emailValid ? false : true}
+        >
           Зарегестрироваться
         </button>
         <p className="register__caption">
@@ -92,7 +130,7 @@ const Register = () => {
             &nbsp;Войти
           </Link>
         </p>
-      </div>
+      </form>
     </section>
   );
 };

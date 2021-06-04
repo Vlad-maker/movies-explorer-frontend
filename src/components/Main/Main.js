@@ -6,7 +6,6 @@ import AboutMe from "./AboutMe/AboutMe";
 import Portfolio from "./Portfolio/Portfolio";
 
 const Main = (props) => {
-  props.handleLoggedIn();
   return (
     <main className='main'>
       <Promo />
