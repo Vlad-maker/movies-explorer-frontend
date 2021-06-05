@@ -1,4 +1,5 @@
 const MAIN_API_URL = 'https://moviesexplorer.nomoredomains.club';
+// const MAIN_API_URL = 'http://localhost:3000';
 
 function responce(res) {
   if (res.ok) {

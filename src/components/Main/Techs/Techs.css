@@ -34,6 +34,12 @@
   letter-spacing: -0.04em;
   margin: 90px 0 26px 0;
   color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
 }
 .techs__caption {
   max-width: 460px;
@@ -46,6 +52,12 @@
   letter-spacing: -0.04em;
   margin: 0 0 100px 0;
   color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
 }
 .techs__list {
   list-style: none;
@@ -69,11 +81,24 @@
   line-height: 17px;
   letter-spacing: -0.04em;
   padding: 21px 0 21px 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  transition: all .2s ease-in-out;
+}
+.techs__column:hover {
+  transform: scale(1.07);
+  cursor: pointer;
 }
 .techs__column:last-child{
     margin-right: 0px;
 }
-
+.techs__link {
+  text-decoration: none;
+}
 @media screen and (max-width: 1150px){
   .techs__column {
     font-size: 12px;
