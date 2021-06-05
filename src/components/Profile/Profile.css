@@ -25,6 +25,12 @@
     line-height: 30px;
     text-align: center;
     color: #000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
 }
 .profile__label {
     margin: 123px 0 0 0;
@@ -56,6 +62,12 @@
     border: none;
     outline: none;
     cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
 }
 .profile__block {
     display: flex;
@@ -77,6 +89,12 @@
     cursor: pointer;
     outline: none;
     transition: opacity 0.3s linear;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
 }
 
 .profile__edit-disable {
@@ -95,6 +113,12 @@
     cursor: pointer;
     outline: none;
     transition: opacity .5s linear;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
 }
 .profile__edit:hover, .profile__logOut:hover {
     opacity: 0.8;

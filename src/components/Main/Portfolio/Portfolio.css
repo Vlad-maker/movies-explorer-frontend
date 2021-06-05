@@ -18,6 +18,12 @@
     line-height: 20px;
     color: #8b8b8b;
     margin: 0 0 30px 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
 }
 .portfolio__block {
     list-style: none;
@@ -45,6 +51,12 @@
     letter-spacing: -0,04em;
     color: #000;
     margin: 0 0 20px 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
 }
 .portfolio__icon {
     width: 20px;

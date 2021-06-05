@@ -19,6 +19,12 @@
     font-style: normal;
     line-height: 170px;
     color: #000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
 }
 .pageNotFound__text {
     margin: 0;
@@ -28,6 +34,12 @@
     font-style: normal;
     line-height: 19px;
     color: #000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
 }
 .pageNotFound__link {
     margin: 184px 0 0 0;
@@ -40,6 +52,12 @@
     text-decoration: none;
     transition: opacity 0.3s linear;
     cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
 }
 .pageNotFound__link:hover {
     opacity: 0.8;

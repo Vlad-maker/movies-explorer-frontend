@@ -24,6 +24,12 @@
     max-width: 730px;
     align-self: center;
     text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
 }
 .promo__links {
     max-width: 308px;
@@ -49,12 +55,19 @@
     text-align: center;
     padding-top: 10px;
     margin-right: 10px;
-    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    transition: all .2s ease-in-out;
 }
 .promo__link:hover {
     cursor: pointer;
     opacity: 0.8;
-    transition: opacity 0.3s linear;
+    transition: opacity 0.1s linear;
+    transform: scale(1.02);
 }
 .promo__link:first-of-type {
     margin-left: 10px;
