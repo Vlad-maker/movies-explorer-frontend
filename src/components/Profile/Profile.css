@@ -142,9 +142,10 @@
         max-width: 260px;
     }
     .profile__edit {
-        margin-top: 379px;
+        margin-top: 179px;
     }
     .profile__container {
         padding-top: 70px;
+        max-height: 740px;
     }
 }
