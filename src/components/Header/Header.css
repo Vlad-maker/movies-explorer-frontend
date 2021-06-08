@@ -256,9 +256,13 @@
 @media screen and (max-width: 500px) {
     .header__sign{
         align-items: center;
+        margin-top: 35px;
     }
     .header__sign-caption {
-        margin-bottom: 80px;
+        margin-bottom: 40px;
+    }
+    .header__movies:first-of-type {
+        margin-top: 100px;
     }
 }
 
