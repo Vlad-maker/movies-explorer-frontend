@@ -34,5 +34,5 @@
 
 </br>
 
-#### [Ссылка на Frontend] (https://b.movies.nomoredomains.club/)
-#### [Ссылка на Backend] (https://github.com/Vlad-maker/movies-explorer-api)
+#### [Ссылка на Frontend](https://b.movies.nomoredomains.club/)
+#### [Ссылка на Backend](https://github.com/Vlad-maker/movies-explorer-api)
